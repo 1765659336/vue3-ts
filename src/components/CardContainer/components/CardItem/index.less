@@ -1,0 +1,55 @@
+// 操作按钮的颜色
+@operation-icon-color: #409eff;
+
+// 按钮放大的大小
+@operation-icon-size: calc(18px * (1 + 0.5 / 2));
+
+// 操作按钮占据的宽度
+@operation-icon-width: calc(@operation-icon-size* var(--operation--icon--number--));
+
+// 卡片item标题与icon容器的高度
+@operation-icon-height: calc(24px * var(--operation--icon--number--));
+
+@keyframes large {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+:deep(.el-card__body){
+    padding: 5px 15px;
+}
+
+.header-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon-container {
+        display: flex;
+        width: @operation-icon-width;
+        height: @operation-icon-height;
+        line-height: @operation-icon-height;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    i {
+        color: @operation-icon-color;
+        cursor: pointer;
+        display: inline-block;
+        // line-height: @operation-icon-height;
+        // height: @operation-icon-height;
+
+        &:hover {
+            animation: large .5s;
+            // 动画结束之后保持原样
+            animation-fill-mode: both;
+            cursor: pointer;
+        }
+    }
+}
