@@ -1,6 +1,7 @@
-import { createApp } from 'vue';
-import '@/assets/style/global.less';
-import '@/assets/style/reset.css';
-import App from './App.vue';
+import { createApp } from "vue";
+import "@/assets/style/global.less";
+import "@/assets/style/reset.css";
+import App from "./App.vue";
+import route from "./router/index";
 
-createApp(App).mount('#app')
+createApp(App).use(route).mount("#app");

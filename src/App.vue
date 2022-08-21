@@ -3,6 +3,7 @@
 
 <template>
   <div class="app">app</div>
+  <router-view></router-view>
 </template>
 
 <style scoped lang="less">
