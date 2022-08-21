@@ -1,6 +1,7 @@
 <template>
   <div class="app">app</div>
   <div>{{ testStore.count }}</div>
+  <el-button type="primary">Primary</el-button>
   <router-view></router-view>
 </template>
 
