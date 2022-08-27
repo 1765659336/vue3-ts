@@ -1,0 +1,141 @@
+// 动画
+.mirror-rotate-vertical-begin {
+    animation: mirrorBegin .5s;
+    // 动画结束之后保持原样
+    animation-fill-mode: both;
+}
+
+@keyframes mirrorBegin {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(180deg);
+    }
+}
+
+.mirror-rotate-vertical-end {
+    animation: mirrorEnd .5s;
+    // 动画结束之后保持原样
+    animation-fill-mode: both;
+}
+
+@keyframes mirrorEnd {
+    from {
+        transform: rotateX(180deg);
+    }
+
+    to {
+        transform: rotateX(0);
+    }
+}
+
+// 布局样式
+.percentage-col-single {
+    display: flex;
+    // 放不下就换行
+    flex-wrap: wrap;
+
+    .col-12-single {
+        width: 100%;
+    }
+
+    .col-10-single {
+        width: 83.3%;
+    }
+
+    .col-8-single {
+        width: 66%;
+    }
+
+    .col-6-single {
+        width: 50%;
+    }
+
+    .col-4-single {
+        width: 33%;
+    }
+
+    .col-2-single {
+        width: 16.6%
+    }
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+// more-span-style
+.span-more {
+    color: #409eff;
+
+    &:hover {
+        color: #0b7cee;
+    }
+}
+
+// main
+.check-resume-conatiner {
+    display: flex;
+    height: 100%;
+
+    .card-container {
+        height: 100%;
+        width: 70%;
+        overflow-y: scroll;
+        padding: 5px 10px 0 10px;
+        background-color: #f1f3f4;
+        box-sizing: border-box;
+
+        .card-container-margin-top {
+            margin-top: 10px;
+
+            .study-experience {
+                display: flex;
+                width: 250px;
+                justify-content: space-between;
+            }
+
+            .basic-message-message {
+
+                &>span {
+                    margin: 0 5px;
+                }
+
+                span:first-child {
+                    margin: 0 20px 0 0;
+                    font-size: 24px;
+                }
+
+                span:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .basic-message-contact {
+                padding: 10px 0 0 20px;
+                box-sizing: border-box;
+
+                span {
+                    padding-left: 5px;
+                }
+            }
+
+            .share-title {
+                margin-right: 10px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .timeline-container {
+        height: 100%;
+        width: 30%;
+        padding: 0 0 0 5px;
+    }
+}
