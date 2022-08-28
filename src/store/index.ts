@@ -24,6 +24,7 @@ export const useTestStore = defineStore("test", {
   actions: {},
 });
 
+// 定义菜单容器
 export const useMenuStore = defineStore("menu", {
   state: () => {
     return {
@@ -34,6 +35,23 @@ export const useMenuStore = defineStore("menu", {
   actions: {
     changeState(menuData) {
       this.menuData = [...menuData];
+    },
+  },
+});
+
+// 定义用户信息容器
+export const useUserInfoStore = defineStore("userInfo", {
+  state: () => {
+    return {
+      token: sessionStorage.getItem("token")
+        ? sessionStorage.getItem("token")
+        : "",
+    };
+  },
+  getters: {},
+  actions: {
+    changeToken(token) {
+      this.token = token;
     },
   },
 });

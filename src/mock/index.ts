@@ -1,4 +1,3 @@
-// const baseURL = import.meta.env.VITE_APP_BASE_URL;
 export default [
   // 获取用户简历详情的接口
   {
@@ -191,6 +190,18 @@ export default [
             level: 2,
           },
         ],
+        message: "mock",
+        status: 200,
+      };
+    },
+  },
+  // 登录接口
+  {
+    type: "post",
+    url: "/auth/login",
+    response: () => {
+      return {
+        content: { token: "oPPuoK43RE6hGdSpDOFbTw" },
         message: "mock",
         status: 200,
       };

@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from "axios";
+import { useUserInfoStore } from "src/store/index";
 
 const requestDevelopment = axios.create({
   timeout: 5000,
@@ -8,8 +9,10 @@ const requestDevelopment = axios.create({
 // request interceptor
 requestDevelopment.interceptors.request.use(
   (config: any) => {
-    // 先暂时配置一个永远有效的token
-    config.headers.Authorization = "Basic oPPuoK43RE6hGdSpDOFbTw";
+    const UserInfoStore = useUserInfoStore();
+    config.headers.Authorization = UserInfoStore.token
+      ? "Basic" + UserInfoStore.token
+      : "";
     return config;
   },
   (error: any) => {
@@ -34,9 +37,10 @@ requestDevelopment.interceptors.response.use(
 
 /* 
   使用create创建axios实例之后，mock拦截不到，目前只能想到这么处理先
+  开发环境用原始axios搭配mock拦截接口
 */
-let request: AxiosInstance = axios;
-if (process.env.NODE_ENV !== "development") {
-  request = requestDevelopment;
+let request: AxiosInstance = requestDevelopment;
+if (process.env.NODE_ENV === "development") {
+  request = axios;
 }
 export default request;
