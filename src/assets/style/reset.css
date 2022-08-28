@@ -135,10 +135,3 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
 }
-
-
-/* css 变量 */
-
-:root {
-    --el-color-primary: #0a8b75;
-}
