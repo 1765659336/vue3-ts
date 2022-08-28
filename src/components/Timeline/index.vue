@@ -44,7 +44,7 @@ import { Location } from '@element-plus/icons-vue';
 import { ElTimeline, ElTimelineItem } from 'element-plus';
 import { PropType } from 'vue';
 import { timelineDataData } from './data';
-import {returnYearMD} from '@/lib/common';
+import {returnYearMD} from 'src/lib/common';
 
 const iconColorArr = ['#ff8d50', '#d25151', '#0a8b75', '#45a0fe'];
 const timelineData = defineProps({
