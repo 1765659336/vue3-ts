@@ -28,7 +28,7 @@ router.beforeEach((to: any, from: any, next: any) => {
   if (routes.map((item) => item.path).includes(to.path)) {
     if (to.path === "/index") {
       GetCurrentUserPageRoute().then((res) => {
-        if (res.data.status === true) {
+        if (res.data.status === 200) {
           const menuStore = useMenuStore();
           menuStore.changeState(res.data.content);
         }
@@ -42,7 +42,7 @@ router.beforeEach((to: any, from: any, next: any) => {
       if (permissionsPages.find((item) => item.path === to.path)) {
         // 保持实时性，每次跳转路由都需要判断，当管理员修改了该用户权限时，尽管用户没有退出，也没有了之前获取的页面权限的权限了
         GetCurrentUserPageRoute().then((res) => {
-          if (res.data.status === true) {
+          if (res.data.status === 200) {
             const menuStore = useMenuStore();
             menuStore.changeState(res.data.content);
             if (routes.length === router.getRoutes().length) {

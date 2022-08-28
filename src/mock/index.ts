@@ -69,7 +69,7 @@ export default [
           telePhone: "string",
         },
         message: "mock",
-        status: true,
+        status: 200,
       };
     },
   },
@@ -192,7 +192,7 @@ export default [
           },
         ],
         message: "mock",
-        status: true,
+        status: 200,
       };
     },
   },
