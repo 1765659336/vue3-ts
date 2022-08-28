@@ -15,8 +15,8 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 
 // 使用pinia状态管理库
-import { createPinia } from "pinia";
-const pinia = createPinia();
+import { createPinia, Pinia } from "pinia";
+const pinia: Pinia = createPinia();
 
 createApp(App).use(route).use(pinia).use(ElementPlus).mount("#app");
 

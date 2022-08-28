@@ -24,3 +24,16 @@ export const useTestStore = defineStore("test", {
   actions: {},
 });
 
+export const useMenuStore = defineStore("menu", {
+  state: () => {
+    return {
+      menuData: [],
+    };
+  },
+  getters: {},
+  actions: {
+    changeState(menuData) {
+      this.menuData = [...menuData];
+    },
+  },
+});

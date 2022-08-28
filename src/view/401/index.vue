@@ -1,13 +1,10 @@
 <template>
-    <div>
-        401
-    </div>
+  <div>
+    401
+    <router-link to="index">初始页</router-link>
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

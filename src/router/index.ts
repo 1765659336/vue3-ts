@@ -1,49 +1,69 @@
 import * as VueRouter from "vue-router";
-import {
-  components,
-  routes,
-  basicRoutes,
-  permissionsPages,
-} from "src/router/routeData";
+import { components, routes, permissionsPages } from "src/router/routeData";
 import { GetCurrentUserPageRoute } from "src/api/permissions";
+import { useMenuStore } from "src/store";
 
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
   routes,
 });
 
+const getChildren = function (res) {
+  const result = [];
+  res.data.content.forEach((item) => {
+    if (item.component) {
+      result.push({
+        path: item.path,
+        component: components[item.component],
+        name: item.name,
+        meta: item.meta,
+      });
+    }
+  });
+  return result;
+};
+
 router.beforeEach((to: any, from: any, next: any) => {
   // 基础路径
-  if (basicRoutes.map((item) => item.path).includes(to.path)) {
+  if (routes.map((item) => item.path).includes(to.path)) {
+    if (to.path === "/index") {
+      GetCurrentUserPageRoute().then((res) => {
+        if (res.data.status === true) {
+          const menuStore = useMenuStore();
+          menuStore.changeState(res.data.content);
+        }
+      });
+    }
     next();
   } else {
     // 判断用户是否登录
     const useToken = true;
     if (useToken) {
-      if (
-        permissionsPages.path === to.path ||
-        permissionsPages.children.find((item) => item.path === to.path)
-      ) {
+      if (permissionsPages.find((item) => item.path === to.path)) {
         // 保持实时性，每次跳转路由都需要判断，当管理员修改了该用户权限时，尽管用户没有退出，也没有了之前获取的页面权限的权限了
         GetCurrentUserPageRoute().then((res) => {
           if (res.data.status === true) {
-            console.log(res);
-            // res.data.content.forEach((item) => {
-            //   router.addRoute("Home", {
-            //     path: item.path,
-            //     component: components[item.component],
-            //     name: item.name,
-            //     meta: item.mate,
-            //   });
-            // });
-            /* 
-              使用find方法代替every方法，every方法识别数组中值为对象时，遍历的次数不对，巨坑的api
-            */
-            if (res.data.content.find((item) => item.path === to.path)) {
-              next();
+            const menuStore = useMenuStore();
+            menuStore.changeState(res.data.content);
+            if (routes.length === router.getRoutes().length) {
+              router.addRoute({
+                path: "/index",
+                component: components["Index"],
+                name: "Index",
+                meta: { title: "index", icon: "" },
+                children: getChildren(res),
+              });
+              next({ ...to, replace: true });
             } else {
-              next("/401");
-              // 没有权限前往401页面
+              /*
+              使用find方法代替every方法，every方法识别数组中值为对象时，遍历的次数不对，巨坑的api
+              */
+              if (res.data.content.find((item) => item.path === to.path)) {
+                next();
+              } else {
+                next("/401");
+                // 没有权限前往401页面
+              }
             }
           } else {
             // 接口报错前往500页面
@@ -62,7 +82,6 @@ router.beforeEach((to: any, from: any, next: any) => {
 });
 
 router.afterEach((to, from) => {
-  console.log("后置路由守卫", to, from);
   document.title = to.meta.title || "Vue3-TS-Ui";
 });
 
