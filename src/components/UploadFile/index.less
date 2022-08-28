@@ -1,0 +1,65 @@
+/* 设置滚动条整体，宽高 */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+
+/* 设置滚动条的轨道 */
+
+::-webkit-scrollbar-track {
+    background: #b3b9bc;
+    border-radius: 1px;
+}
+
+
+/* 设置滚动条里面的小方块 */
+
+::-webkit-scrollbar-thumb {
+    background: #0ebfb0;
+    border-radius: 10px;
+}
+
+.upload-file-container {
+    display: flex;
+
+    .file-container {
+        overflow: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+
+        .file {
+            width: 150px;
+            height: 200px;
+            border: 1px solid red;
+            display: inline-block;
+        }
+    }
+
+    .upload-btn {
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        :deep(.avatar-uploader) {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            :deep(.el-upload) {
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+            }
+        }
+
+        .avatar-uploader-icon {
+            font-size: 24px;
+        }
+    }
+}
