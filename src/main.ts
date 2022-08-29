@@ -16,7 +16,14 @@ import "element-plus/dist/index.css";
 
 // 使用pinia状态管理库
 import { createPinia, Pinia } from "pinia";
+
+// 全局导入所有的icon
+import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 const pinia: Pinia = createPinia();
 
-createApp(App).use(route).use(pinia).use(ElementPlus).mount("#app");
+const app = createApp(App);
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component);
+}
 
+app.use(route).use(pinia).use(ElementPlus).mount("#app");
