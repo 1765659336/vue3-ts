@@ -17,12 +17,13 @@ import { reactive } from "vue";
 </template>
 
 <script setup lang="ts">
-import { login } from "src/api/permissions";
+import { login, style } from "src/api/permissions";
 import { reactive } from "vue";
-import { useUserInfoStore } from "src/store/index";
+import { useUserInfoStore, useStyleVariableStore } from "src/store/index";
 import router from "src/router/index";
 
 const UserInfoStore = useUserInfoStore();
+const styleVariableStore = useStyleVariableStore();
 const form = reactive({
   name: "",
   password: "",
@@ -37,6 +38,13 @@ const onSubmit = function () {
         session当应用关闭时清空，下次点开访问系统需要重新登录
     */
     sessionStorage.setItem("token", res.data.content.token);
+
+    style().then((res) => {
+      console.log(res);
+      styleVariableStore.changeMainColor(res.data.content.mainColor);
+      sessionStorage.setItem("mainColor", res.data.content.mainColor);
+    });
+
     /* 
         注意router.push不要写在login接口外面，因为没有Promise是异步任务，如果写在外面，
         router.push到index的时候，异步login任务还没有在本地和仓库中存储token，所以会重定向

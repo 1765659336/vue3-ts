@@ -75,4 +75,16 @@ export default [
       };
     },
   },
+  // 获取当前用户系统的全局样式配置
+  {
+    type: "post",
+    url: "/user/style",
+    response: () => {
+      return {
+        content: { mainColor: "pink" },
+        message: "mock",
+        status: 200,
+      };
+    },
+  },
 ];

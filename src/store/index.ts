@@ -55,3 +55,20 @@ export const useUserInfoStore = defineStore("userInfo", {
     },
   },
 });
+
+// 全局样式变量仓库
+export const useStyleVariableStore = defineStore("styleVariable", {
+  state: () => {
+    return {
+      mainColor: sessionStorage.getItem("mainColor")
+        ? sessionStorage.getItem("mainColor")
+        : "",
+    };
+  },
+  getters: {},
+  actions: {
+    changeMainColor(color) {
+      this.mainColor = color;
+    },
+  },
+});
