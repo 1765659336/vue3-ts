@@ -1,23 +1,23 @@
-const Home = () => import("src/view/Home/index.vue");
-const CheckResume = () => import("src/view/CheckResume/index.vue");
-const Upload = () => import("src/view/Upload/index.vue");
-const NoPermission = () => import("src/view/401/index.vue");
-const NontFound = () => import("src/view/404/index.vue");
-const ServerError = () => import("src/view/500/index.vue");
-const Login = () => import("src/view/Login/index.vue");
-const Index11 = () => import("src/view/Test/index11.vue");
-const Index12 = () => import("src/view/Test/index12.vue");
-const Index13 = () => import("src/view/Test/index13.vue");
-const Index14 = () => import("src/view/Test/index14.vue");
-const Index21 = () => import("src/view/Test/index21.vue");
-const Index22 = () => import("src/view/Test/index22.vue");
-const Index23 = () => import("src/view/Test/index23.vue");
-const Index24 = () => import("src/view/Test/index24.vue");
-const Index31 = () => import("src/view/Test/index31.vue");
-const Index32 = () => import("src/view/Test/index32.vue");
-const Index33 = () => import("src/view/Test/index33.vue");
-const Index34 = () => import("src/view/Test/index34.vue");
-const Index = () => import("src/view/Index/index.vue");
+const Home = () => import("src/views/Home/index.vue");
+const CheckResume = () => import("src/views/CheckResume/index.vue");
+const Upload = () => import("src/views/Upload/index.vue");
+const NoPermission = () => import("src/views/401/index.vue");
+const NontFound = () => import("src/views/404/index.vue");
+const ServerError = () => import("src/views/500/index.vue");
+const Login = () => import("src/views/Login/index.vue");
+const Index11 = () => import("src/views/Test/index11.vue");
+const Index12 = () => import("src/views/Test/index12.vue");
+const Index13 = () => import("src/views/Test/index13.vue");
+const Index14 = () => import("src/views/Test/index14.vue");
+const Index21 = () => import("src/views/Test/index21.vue");
+const Index22 = () => import("src/views/Test/index22.vue");
+const Index23 = () => import("src/views/Test/index23.vue");
+const Index24 = () => import("src/views/Test/index24.vue");
+const Index31 = () => import("src/views/Test/index31.vue");
+const Index32 = () => import("src/views/Test/index32.vue");
+const Index33 = () => import("src/views/Test/index33.vue");
+const Index34 = () => import("src/views/Test/index34.vue");
+const Index = () => import("src/views/Index/index.vue");
 // 基础路由
 export const routes = [
   {
