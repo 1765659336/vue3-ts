@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ '--main-color--': StyleVariableStore.mainColor }">
+  <div :style="{ '--main-color--': `${StyleVariableStore.mainColor}` }">
     <router-view></router-view>
     <el-button @click="changeColor">测试修改全局主题色</el-button>
   </div>

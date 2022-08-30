@@ -5,11 +5,11 @@
         <el-icon><Operation /></el-icon>
       </template>
       <router-link to="index">初始页</router-link>
-      <div v-for="item in menu" :key="item.routeId">
+      <div v-for="item in menuTree" :key="item.pageId">
         <div>一级菜单标题------{{ item.title }}</div>
         <div
           v-for="itemMenu in item.children"
-          :key="itemMenu.routeId"
+          :key="itemMenu.pageId"
           @click="
             () => {
               menuClick(itemMenu.path);
@@ -28,53 +28,11 @@
 </template>
 
 <script setup lang="ts" name="Index">
-import { onMounted, reactive } from "vue";
-import { GetResumeById } from "src/api";
-import { useTestStore, useMenuStore } from "src/store";
+import { useMenuStore } from "src/store";
+import getMenuTree from "src/hooks/useGetMenuTree";
 import router from "src/router";
-const testStore = useTestStore();
 const menuStore = useMenuStore();
-const menu = reactive<
-  Array<{
-    title: string;
-    routeId: number;
-    // 暂时只考虑到二级菜单
-    children?: Array<{
-      title: string;
-      path: string;
-      routeId: number;
-      children?: Array<{ title: string; path: string }>;
-    }>;
-  }>
->([]);
-onMounted(() => {
-  menuStore.menuData.forEach((item) => {
-    if (item.level === 1) {
-      menu.push({
-        title: item.mate.title,
-        routeId: item.routeId,
-        children: [],
-      });
-    }
-  });
-  menuStore.menuData.forEach((item) => {
-    if (item.level === 2) {
-      menu.forEach((menuItem) => {
-        if (menuItem.routeId === item.parentId) {
-          menuItem.children.push({
-            title: item.mate.title,
-            path: item.path,
-            routeId: item.routeId,
-          });
-        }
-      });
-    }
-  });
-  GetResumeById(2).then((res) => {
-    // console.log(res);
-  });
-});
-
+const {menuTree} = getMenuTree(menuStore.menuData);
 const menuClick = function (path: string) {
   router.push({ path });
 };

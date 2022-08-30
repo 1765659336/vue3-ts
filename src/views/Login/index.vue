@@ -4,10 +4,10 @@ import { reactive } from "vue";
   <div>
     <el-form :model="form" label-width="120px">
       <el-form-item label="Activity name">
-        <el-input v-model="form.name" />
+        <el-input v-model="form.userName" />
       </el-form-item>
       <el-form-item label="Activity password">
-        <el-input v-model="form.password" />
+        <el-input v-model="form.passWord" />
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">登录</el-button>
@@ -25,8 +25,8 @@ import router from "src/router/index";
 const UserInfoStore = useUserInfoStore();
 const styleVariableStore = useStyleVariableStore();
 const form = reactive({
-  name: "",
-  password: "",
+  userName: "",
+  passWord: "",
 });
 
 const onSubmit = function () {

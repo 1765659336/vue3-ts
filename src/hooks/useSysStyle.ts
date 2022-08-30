@@ -10,7 +10,6 @@ export default function () {
     StyleVariableStore.changeMainColor("skyblue");
     sessionStorage.setItem("mainColor", "skyblue");
   };
-
   return {
     StyleVariableStore,
     changeColor,

@@ -2,40 +2,44 @@ import * as VueRouter from "vue-router";
 import { components, routes, permissionsPages } from "src/router/routeData";
 import { GetCurrentUserPageRoute } from "src/api/permissions";
 import { useMenuStore, useUserInfoStore } from "src/store";
+import { AxiosResponse } from "axios";
+import { IPageSqlItem } from "src/constraint/sqlsCommon";
+import { RouteRecordRaw } from "vue-router";
 
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
   routes,
 });
 
-const getChildren = function (res) {
-  const result = [];
-  res.data.content.forEach((item) => {
+const getChildren = function (res: AxiosResponse) {
+  const result: Array<RouteRecordRaw> = [];
+  res.data.content.forEach((item: IPageSqlItem) => {
     if (item.component) {
       result.push({
         path: item.path,
         component: components[item.component],
         name: item.name,
-        meta: item.meta,
+        meta: item.mate,
       });
     }
   });
   return result;
 };
 
-router.beforeEach((to: any, from: any, next: any) => {
+router.beforeEach((to: any, _from: any, next: any) => {
   const UserInfoStore = useUserInfoStore();
   const menuStore = useMenuStore();
   // 基础路径
   if (routes.map((item) => item.path).includes(to.path)) {
     if (to.path === "/index") {
-      GetCurrentUserPageRoute().then((res) => {
-        if (res.data.status === 200) {
-          menuStore.changeState(res.data.content);
-        }
-      });
       if (!UserInfoStore.token) {
         next("/login");
+      } else {
+        GetCurrentUserPageRoute().then((res) => {
+          if (res.data.status === 200) {
+            menuStore.changeState(res.data.content);
+          }
+        });
       }
     }
     next();
@@ -60,7 +64,11 @@ router.beforeEach((to: any, from: any, next: any) => {
               /*
               使用find方法代替every方法，every方法识别数组中值为对象时，遍历的次数不对，巨坑的api
               */
-              if (res.data.content.find((item) => item.path === to.path)) {
+              if (
+                res.data.content.find(
+                  (item: IPageSqlItem) => item.path === to.path
+                )
+              ) {
                 next();
               } else {
                 next("/401");
@@ -83,8 +91,8 @@ router.beforeEach((to: any, from: any, next: any) => {
   }
 });
 
-router.afterEach((to, from) => {
-  document.title = to.meta.title || "Vue3-TS-Ui";
+router.afterEach((to) => {
+  document.title = (to.meta.title as string) || "Vue3-TS-Ui";
 });
 
 export default router;

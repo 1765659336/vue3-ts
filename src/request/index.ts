@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from "axios";
+import { ElMessage } from "element-plus";
 import { useUserInfoStore } from "src/store/index";
 
 const requestDevelopment = axios.create({
@@ -22,13 +23,42 @@ requestDevelopment.interceptors.request.use(
 
 // response interceptor
 requestDevelopment.interceptors.response.use(
-  (response: { status: number }) => {
-    if (response.status === 200) {
-      console.log("请求成功");
-    } else {
-      console.log("请求失败");
-    }
+  (response: any) => {
     return response;
+  },
+  (error: any) => {
+    return Promise.reject(error);
+  }
+);
+
+// request interceptor
+axios.interceptors.request.use(
+  (config: any) => {
+    const UserInfoStore = useUserInfoStore();
+    config.headers.Authorization = UserInfoStore.token
+      ? "Basic" + UserInfoStore.token
+      : "";
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// response interceptor
+axios.interceptors.response.use(
+  (response) => {
+    if (response.status !== 200) {
+      ElMessage.error(response.config.url + "接口报错:" + response.status);
+    }
+    if (!response.data.status) {
+      ElMessage.error(
+        response.config.url + "接口报错:" + response.data.message
+      );
+    } else {
+      ElMessage.success(response.config.url + "接口成功:" + response.data.message);
+      return response;
+    }
   },
   (error: any) => {
     return Promise.reject(error);

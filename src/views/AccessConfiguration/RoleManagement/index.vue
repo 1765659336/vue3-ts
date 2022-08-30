@@ -1,31 +1,26 @@
 <template>
   <el-table :data="tableData" style="width: 100%" max-height="250">
-    <el-table-column fixed prop="date" label="Date" width="150" />
-    <el-table-column prop="name" label="Name" width="120" />
-    <el-table-column prop="state" label="State" width="120" />
-    <el-table-column prop="city" label="City" width="120" />
-    <el-table-column prop="address" label="Address" width="600" />
-    <el-table-column prop="zip" label="Zip" width="120" />
-    <el-table-column fixed="right" label="Operations" width="400">
+    <el-table-column prop="name" label="角色名称" width="120" />
+    <el-table-column fixed="right" label="操作列" width="400">
       <template #default="scope">
-        <el-button
-          link
-          type="primary"
-          size="small"
-          @click.prevent="deleteRow(scope.$index)"
+        <el-button link type="primary" size="small" @click="updateRow(scope)"
+          >编辑</el-button
         >
-          Remove
+        <el-button link type="primary" size="small" @click="deleteRow(scope)">
+          删除
         </el-button>
         <el-button link type="primary" size="small" @click="drawer = !drawer"
-          >RoleManagement</el-button
+          >分配用户</el-button
+        >
+        <el-button link type="primary" size="small" @click="drawer = !drawer"
+          >分配页面</el-button
         >
       </template>
     </el-table-column>
   </el-table>
   <el-button class="mt-4" style="width: 100%" @click="onAddItem"
-    >Add Item</el-button
+    >新增角色</el-button
   >
-
   <el-drawer v-model="drawer" direction="rtl">
     <template #title>
       <h4>选择配置的人员</h4>
@@ -33,7 +28,7 @@
     <template #default>
       <span>搜索</span>
       <span>列表查询，虚拟滚动</span>
-      <div v-for="item in 100">人员{{ item }}</div>
+      <div v-for="(item, index) in 100" :key="index">人员{{ item }}</div>
     </template>
     <template #footer>
       <div>
@@ -46,50 +41,44 @@
 
 <script setup lang="ts" name="RoleManagement">
 import { ElMessageBox } from "element-plus";
-import { ref } from "vue";
+import { getRoles, deleteRole, postRole, putRole } from "src/api/permissions";
+import { IRoleTableItem, RoleTable } from "src/constraint/tablesCommon";
+import { reactive, ref } from "vue";
 
-const now = new Date();
+const tableData = reactive<RoleTable>([]);
 
-const tableData = ref([
-  {
-    date: "2016-05-01",
-    name: "Tom",
-    state: "California",
-    city: "Los Angeles",
-    address: "No. 189, Grove St, Los Angeles",
-    zip: "CA 90036",
-  },
-  {
-    date: "2016-05-02",
-    name: "Tom",
-    state: "California",
-    city: "Los Angeles",
-    address: "No. 189, Grove St, Los Angeles",
-    zip: "CA 90036",
-  },
-  {
-    date: "2016-05-03",
-    name: "Tom",
-    state: "California",
-    city: "Los Angeles",
-    address: "No. 189, Grove St, Los Angeles",
-    zip: "CA 90036",
-  },
-]);
+const updateRow = (scope: { $index: number; row: IRoleTableItem }) => {
+  ElMessageBox.confirm("确认删除?", "系统提示", {
+    confirmButtonText: "确认",
+    cancelButtonText: "取消",
+    type: "warning",
+  })
+    .then(() => {
+      putRole({ roleId: scope.row.roleId, name: "edit" }).then((res) => {
+        console.log(res);
+      });
+    })
+    .catch(() => {});
+};
 
-const deleteRow = (index: number) => {
-  tableData.value.splice(index, 1);
+const deleteRow = (scope: { $index: number; row: IRoleTableItem }) => {
+  ElMessageBox.confirm("确认删除?", "系统提示", {
+    confirmButtonText: "确认",
+    cancelButtonText: "取消",
+    type: "warning",
+  })
+    .then(() => {
+      tableData.splice(scope.$index, 1);
+      deleteRole(scope.row.roleId).then((res) => {
+        console.log(res);
+      });
+    })
+    .catch(() => {});
 };
 
 const onAddItem = () => {
-  now.setDate(now.getDate() + 1);
-  tableData.value.push({
-    date: "aasda",
-    name: "Tom",
-    state: "California",
-    city: "Los Angeles",
-    address: "No. 189, Grove St, Los Angeles",
-    zip: "CA 90036",
+  postRole({ name: "oa" }).then((res) => {
+    console.log(res);
   });
 };
 const drawer = ref(false);
@@ -97,7 +86,7 @@ function cancelClick() {
   drawer.value = false;
 }
 function confirmClick() {
-  ElMessageBox.confirm(`Are you confirm to chose?`)
+  ElMessageBox.confirm(`确认保存?`)
     .then(() => {
       drawer.value = false;
     })
@@ -105,6 +94,13 @@ function confirmClick() {
       // catch error
     });
 }
+
+getRoles().then((res) => {
+  console.log(res);
+  res.data.content.forEach((element: IRoleTableItem) => {
+    tableData.push(element);
+  });
+});
 </script>
 
 <style scoped lang="less">

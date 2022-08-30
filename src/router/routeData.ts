@@ -9,7 +9,7 @@ const Index11 = () => import("src/views/Test/index11.vue");
 const Index12 = () => import("src/views/Test/index12.vue");
 const Index13 = () => import("src/views/Test/index13.vue");
 const Index14 = () => import("src/views/Test/index14.vue");
-const Index21 = () => import("src/views/Test/index21.vue");
+const StyleConfig = () => import("src/views/SystemConfig/StyleConfig/index.vue");
 const Index22 = () => import("src/views/Test/index22.vue");
 const Index23 = () => import("src/views/Test/index23.vue");
 const Index24 = () => import("src/views/Test/index24.vue");
@@ -17,6 +17,7 @@ const Index31 = () => import("src/views/Test/index31.vue");
 const Index32 = () => import("src/views/Test/index32.vue");
 const Index33 = () => import("src/views/Test/index33.vue");
 const Index34 = () => import("src/views/Test/index34.vue");
+const Index35 = () => import("src/views/Test/index35.vue");
 const Index = () => import("src/views/Index/index.vue");
 const RoleManagement = () =>
   import("src/views/AccessConfiguration/RoleManagement/index.vue");
@@ -26,19 +27,21 @@ export const routes = [
     path: "/",
     redirect: "/index",
     component: Index,
+    children: [],
   },
   {
     path: "/index",
     component: Index,
+    children: [],
   },
-  { path: "/401", component: NoPermission },
-  { path: "/404", component: NontFound },
-  { path: "/500", component: ServerError },
-  { path: "/login", component: Login },
+  { path: "/401", component: NoPermission, children: [] },
+  { path: "/404", component: NontFound, children: [] },
+  { path: "/500", component: ServerError, children: [] },
+  { path: "/login", component: Login, children: [] },
 ];
 
 // 除基础页面之外的系统页面
-export const permissionsPages = [
+export const permissionsPages: Array<{ path: string }> = [
   { path: "/index" },
   { path: "/home" },
   { path: "/checkResume" },
@@ -52,7 +55,7 @@ export const permissionsPages = [
     path: "/index14",
   },
   {
-    path: "/index21",
+    path: "/StyleConfig",
   },
   {
     path: "/index22",
@@ -78,15 +81,18 @@ export const permissionsPages = [
   {
     path: "/RoleManagement",
   },
+  { path: "/Index35" },
 ];
 
 // 远程可配置页面
-export const components = {
+export const components: {
+  [k: string]: () => Promise<typeof import("*.vue")>;
+} = {
   Index11,
   Index12,
   Index13,
   Index14,
-  Index21,
+  StyleConfig,
   Index22,
   Index23,
   Index24,
@@ -99,4 +105,5 @@ export const components = {
   Home,
   Index,
   RoleManagement,
+  Index35,
 };
