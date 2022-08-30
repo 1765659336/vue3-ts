@@ -18,6 +18,8 @@ const Index32 = () => import("src/views/Test/index32.vue");
 const Index33 = () => import("src/views/Test/index33.vue");
 const Index34 = () => import("src/views/Test/index34.vue");
 const Index = () => import("src/views/Index/index.vue");
+const RoleManagement = () =>
+  import("src/views/AccessConfiguration/RoleManagement/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -37,7 +39,7 @@ export const routes = [
 
 // 除基础页面之外的系统页面
 export const permissionsPages = [
-  {path: '/index'},
+  { path: "/index" },
   { path: "/home" },
   { path: "/checkResume" },
   { path: "/upload" },
@@ -73,6 +75,9 @@ export const permissionsPages = [
   {
     path: "/index34",
   },
+  {
+    path: "/RoleManagement",
+  },
 ];
 
 // 远程可配置页面
@@ -92,5 +97,6 @@ export const components = {
   CheckResume,
   Upload,
   Home,
-  Index
+  Index,
+  RoleManagement,
 };
