@@ -6,12 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import { useStyleVariableStore } from "src/store";
-const StyleVariableStore = useStyleVariableStore();
-const changeColor = function () {
-  StyleVariableStore.changeMainColor("skyblue");
-  sessionStorage.setItem("mainColor", "skyblue");
-};
+import useSysStyle from "./hooks/useSysStyle";
+const { StyleVariableStore, changeColor } = useSysStyle();
 </script>
 
 <style scoped lang="less"></style>

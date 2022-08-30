@@ -1,3 +1,6 @@
+/* 
+  @Description：当前页面有哪些按钮的权限
+*/
 import { computed } from "vue";
 import { useMenuStore } from "src/store/index";
 import router from "src/router/index";
@@ -14,4 +17,4 @@ export default function () {
   return {
     btnArray,
   };
-};
+}
