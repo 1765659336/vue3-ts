@@ -11,6 +11,6 @@
 
 <style scoped lang="less">
 .title {
-    color: @mainColor;
+    color: @MainColor;
 }
 </style>

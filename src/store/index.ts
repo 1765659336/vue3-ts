@@ -27,7 +27,7 @@ export const useUserInfoStore = defineStore("userInfo", {
   },
   getters: {},
   actions: {
-    changeToken(token:string) {
+    changeToken(token: string) {
       this.token = token;
     },
   },
@@ -37,15 +37,37 @@ export const useUserInfoStore = defineStore("userInfo", {
 export const useStyleVariableStore = defineStore("styleVariable", {
   state: () => {
     return {
+      // 系统主题色
       mainColor: sessionStorage.getItem("mainColor")
         ? sessionStorage.getItem("mainColor")
+        : "",
+      // 菜单触发图标的颜色
+      menuTriggerIconColor: sessionStorage.getItem("menuTriggerIconColor")
+        ? sessionStorage.getItem("menuTriggerIconColor")
+        : "",
+      // 菜单标题的颜色
+      menuTitleColor: sessionStorage.getItem("menuTitleColor")
+        ? sessionStorage.getItem("menuTitleColor")
+        : "",
+      // 菜单主体的颜色
+      menuMainColor: sessionStorage.getItem("menuMainColor")
+        ? sessionStorage.getItem("menuMainColor")
         : "",
     };
   },
   getters: {},
   actions: {
-    changeMainColor(color) {
+    changeMainColor(color: string) {
       this.mainColor = color;
+    },
+    changeMenuTriggerIconColor(color: string) {
+      this.menuTriggerIconColor = color;
+    },
+    changeMenuTitleColor(color: string) {
+      this.menuTitleColor = color;
+    },
+    changeMenuMainColor(color: string) {
+      this.menuMainColor = color;
     },
   },
 });

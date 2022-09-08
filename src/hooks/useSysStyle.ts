@@ -6,12 +6,31 @@ import { useStyleVariableStore } from "src/store";
 
 export default function () {
   const StyleVariableStore = useStyleVariableStore();
-  const changeColor = function () {
-    StyleVariableStore.changeMainColor("skyblue");
-    sessionStorage.setItem("mainColor", "skyblue");
+  // 修改主题颜色
+  const changeMainColor = function (color: string) {
+    StyleVariableStore.changeMainColor(color);
+    sessionStorage.setItem("mainColor", color);
+  };
+  // 修改菜单触发图标的颜色
+  const changeMenuTriggerIconColor = function (color: string) {
+    StyleVariableStore.changeMenuTriggerIconColor(color);
+    sessionStorage.setItem("menuTriggerIconColor", color);
+  };
+  // 修改菜单标题的颜色
+  const changeMenuTitleColor = function (color: string) {
+    StyleVariableStore.changeMenuTitleColor(color);
+    sessionStorage.setItem("menuTitleColor", color);
+  };
+  // 修改菜单主体的颜色
+  const changeMenuMainColor = function (color: string) {
+    StyleVariableStore.changeMenuMainColor(color);
+    sessionStorage.setItem("menuMainColor", color);
   };
   return {
     StyleVariableStore,
-    changeColor,
+    changeMainColor,
+    changeMenuTriggerIconColor,
+    changeMenuTitleColor,
+    changeMenuMainColor
   };
 }

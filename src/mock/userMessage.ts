@@ -15,7 +15,12 @@ export const userApis: Array<MockMethod> = [
     url: "/user/style",
     response: () => {
       return {
-        content: { mainColor: "pink" },
+        content: {
+          mainColor: "pink",
+          menuTriggerIconColor: "pink",
+          menuTitleColor: "pink",
+          menuMainColor: "pink",
+        },
         message: "mock",
         status: 200,
       };

@@ -21,9 +21,15 @@ import { login, style } from "src/api/permissions";
 import { reactive } from "vue";
 import { useUserInfoStore, useStyleVariableStore } from "src/store/index";
 import router from "src/router/index";
-
+import useSysStyle from "src/hooks/useSysStyle";
 const UserInfoStore = useUserInfoStore();
 const styleVariableStore = useStyleVariableStore();
+const {
+  changeMainColor,
+  changeMenuTriggerIconColor,
+  changeMenuTitleColor,
+  changeMenuMainColor,
+} = useSysStyle();
 const form = reactive({
   userName: "",
   passWord: "",
@@ -38,11 +44,12 @@ const onSubmit = function () {
         session当应用关闭时清空，下次点开访问系统需要重新登录
     */
     sessionStorage.setItem("token", res.data.content.token);
-
     style().then((res) => {
       console.log(res);
-      styleVariableStore.changeMainColor(res.data.content.mainColor);
-      sessionStorage.setItem("mainColor", res.data.content.mainColor);
+      changeMainColor(res.data.content.mainColor);
+      changeMenuTriggerIconColor(res.data.content.menuTriggerIconColor);
+      changeMenuTitleColor(res.data.content.menuTitleColor);
+      changeMenuMainColor(res.data.content.menuMainColor);
     });
 
     /* 

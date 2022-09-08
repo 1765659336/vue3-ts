@@ -1,13 +1,23 @@
 <template>
-  <div :style="{ '--main-color--': `${StyleVariableStore.mainColor}` }">
+  <div
+    :style="{
+      '--main-color--': StyleVariableStore.mainColor,
+      '--menu-title-color--': StyleVariableStore.menuTitleColor,
+      '--menu-trigger-icon-color--': StyleVariableStore.menuTriggerIconColor,
+      '--menu-main-color--': StyleVariableStore.menuMainColor,
+    }"
+  >
     <router-view></router-view>
-    <el-button @click="changeColor">测试修改全局主题色</el-button>
   </div>
+  <div>{{StyleVariableStore.mainColor}}</div>
+  <div>{{StyleVariableStore.menuTitleColor}}</div>
+  <div>{{StyleVariableStore.menuTriggerIconColor}}</div>
+  <div>{{StyleVariableStore.menuMainColor}}</div>
 </template>
 
 <script setup lang="ts">
 import useSysStyle from "./hooks/useSysStyle";
-const { StyleVariableStore, changeColor } = useSysStyle();
+const { StyleVariableStore } = useSysStyle();
 </script>
 
 <style scoped lang="less"></style>
