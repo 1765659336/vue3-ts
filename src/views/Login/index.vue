@@ -17,13 +17,13 @@ import { reactive } from "vue";
 </template>
 
 <script setup lang="ts">
-import { login, style } from "src/api/permissions";
+import { Login, getSystemStyle } from "src/api/permissions";
 import { reactive } from "vue";
-import { useUserInfoStore, useStyleVariableStore } from "src/store/index";
 import router from "src/router/index";
 import useSysStyle from "src/hooks/useSysStyle";
-const UserInfoStore = useUserInfoStore();
-const styleVariableStore = useStyleVariableStore();
+import useUserInfo from "src/hooks/useUserInfo";
+
+const { changeToken, changeUserId } = useUserInfo();
 const {
   changeMainColor,
   changeMenuTriggerIconColor,
@@ -36,16 +36,11 @@ const form = reactive({
 });
 
 const onSubmit = function () {
-  login(form).then((res) => {
-    console.log(res);
-    UserInfoStore.changeToken(res.data.content.token);
-    /* 
-        pinia页面刷新数据重置，在session中存一份，在store中默认先去读session中的数据
-        session当应用关闭时清空，下次点开访问系统需要重新登录
-    */
-    sessionStorage.setItem("token", res.data.content.token);
-    style().then((res) => {
-      console.log(res);
+  Login(form).then((res) => {
+    const { token, userId } = res.data.content;
+    changeToken(token);
+    changeUserId(userId);
+    getSystemStyle(userId).then((res) => {
       changeMainColor(res.data.content.mainColor);
       changeMenuTriggerIconColor(res.data.content.menuTriggerIconColor);
       changeMenuTitleColor(res.data.content.menuTitleColor);

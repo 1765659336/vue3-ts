@@ -43,9 +43,22 @@ export interface IPageRoleRelationItem {
 export type PageRoleRelationTable = Array<IPageRoleRelationItem>;
 
 export interface IUserItem {
+  userId: number;
   userName: string;
   passWord: string;
   token: string;
 }
 
 export type UserTable = Array<IUserItem>;
+
+export interface ISystemStyleItem {
+  styleId: number;
+  userId: number;
+  mainColor: string;
+  menuTriggerIconColor: string;
+  menuTitleColor: string;
+  menuMainColor: string;
+  [k: string]: string | number | null;
+}
+
+export type SystemStyle = Array<ISystemStyleItem>;

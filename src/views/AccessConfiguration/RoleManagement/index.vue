@@ -41,7 +41,7 @@
 
 <script setup lang="ts" name="RoleManagement">
 import { ElMessageBox } from "element-plus";
-import { getRoles, deleteRole, postRole, putRole } from "src/api/permissions";
+import { GetRoles, DeleteRole, postRole, putRole } from "src/api/permissions";
 import { IRoleTableItem, RoleTable } from "src/constraint/tablesCommon";
 import { reactive, ref } from "vue";
 
@@ -69,7 +69,7 @@ const deleteRow = (scope: { $index: number; row: IRoleTableItem }) => {
   })
     .then(() => {
       tableData.splice(scope.$index, 1);
-      deleteRole(scope.row.roleId).then((res) => {
+      DeleteRole(scope.row.roleId).then((res) => {
         console.log(res);
       });
     })
@@ -95,7 +95,7 @@ function confirmClick() {
     });
 }
 
-getRoles().then((res) => {
+GetRoles().then((res) => {
   console.log(res);
   res.data.content.forEach((element: IRoleTableItem) => {
     tableData.push(element);

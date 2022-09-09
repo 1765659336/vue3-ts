@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { PageSql } from "src/constraint/sqlsCommon";
+import { IStyleVariableStore } from "src/constraint/storeCommon";
 
 // 定义菜单容器
 export const useMenuStore = defineStore("menu", {
@@ -23,6 +24,9 @@ export const useUserInfoStore = defineStore("userInfo", {
       token: sessionStorage.getItem("token")
         ? sessionStorage.getItem("token")
         : "",
+      userId: sessionStorage.getItem("userId")
+        ? sessionStorage.getItem("userId")
+        : 0,
     };
   },
   getters: {},
@@ -30,13 +34,16 @@ export const useUserInfoStore = defineStore("userInfo", {
     changeToken(token: string) {
       this.token = token;
     },
+    changeUserId(userId: number) {
+      this.userId = userId;
+    },
   },
 });
 
 // 全局样式变量仓库
 export const useStyleVariableStore = defineStore("styleVariable", {
   state: () => {
-    return {
+    const state: IStyleVariableStore = {
       // 系统主题色
       mainColor: sessionStorage.getItem("mainColor")
         ? sessionStorage.getItem("mainColor")
@@ -54,6 +61,7 @@ export const useStyleVariableStore = defineStore("styleVariable", {
         ? sessionStorage.getItem("menuMainColor")
         : "",
     };
+    return state;
   },
   getters: {},
   actions: {

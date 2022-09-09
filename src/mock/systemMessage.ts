@@ -51,7 +51,6 @@ export const roleApis: Array<MockMethod> = [
     url: "/search/Roles",
     // 请求url参数默认为string
     response: (data: { query: { id: string } }) => {
-      console.log(Number(data.query.id));
       if (queryRoleById(Number(data.query.id))) {
         const deleteData = deleteRoleById(Number(data.query.id));
         return {

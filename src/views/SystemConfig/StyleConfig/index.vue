@@ -10,24 +10,36 @@
 </template>
 
 <script setup lang="ts">
+import { postSystemStyle } from "src/api/permissions";
 import useSysStyle from "src/hooks/useSysStyle";
 import { ref } from "vue";
 
-const mainColor = ref("");
-const menuTriggerIconColor = ref("");
-const menuTitleColor = ref("");
-const menuMainColor = ref("");
 const {
+  StyleVariableStore,
   changeMainColor,
   changeMenuTriggerIconColor,
   changeMenuTitleColor,
   changeMenuMainColor,
 } = useSysStyle();
+
+const mainColor = ref(StyleVariableStore.mainColor);
+const menuTriggerIconColor = ref(StyleVariableStore.menuTriggerIconColor);
+const menuTitleColor = ref(StyleVariableStore.menuTitleColor);
+const menuMainColor = ref(StyleVariableStore.menuMainColor);
+
 const save = function () {
-  changeMainColor(mainColor.value);
-  changeMenuTriggerIconColor(menuTriggerIconColor.value);
-  changeMenuTitleColor(menuTitleColor.value);
-  changeMenuMainColor(menuMainColor.value);
+  changeMainColor(mainColor.value as string);
+  changeMenuTriggerIconColor(menuTriggerIconColor.value as string);
+  changeMenuTitleColor(menuTitleColor.value as string);
+  changeMenuMainColor(menuMainColor.value as string);
+  postSystemStyle(Number(sessionStorage.getItem("userId")), {
+    mainColor: mainColor.value,
+    menuTriggerIconColor: menuTriggerIconColor.value,
+    menuTitleColor: menuTitleColor.value,
+    menuMainColor: menuMainColor.value,
+  }).then((res) => {
+    console.log(res);
+  });
 };
 </script>
 
