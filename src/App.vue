@@ -6,6 +6,7 @@
       '--menu-trigger-icon-color--': `${StyleVariableStore.menuTriggerIconColor}`,
       '--menu-main-color--': `${StyleVariableStore.menuMainColor}`,
     }"
+    class="app"
   >
     <router-view></router-view>
   </div>
@@ -16,4 +17,8 @@ import useSysStyle from "./hooks/useSysStyle";
 const { StyleVariableStore } = useSysStyle();
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.app {
+  position: relative;
+}
+</style>

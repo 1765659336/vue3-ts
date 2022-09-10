@@ -9,7 +9,7 @@ const Index11 = () => import("src/views/Test/index11.vue");
 const Index12 = () => import("src/views/Test/index12.vue");
 const Index13 = () => import("src/views/Test/index13.vue");
 const Index14 = () => import("src/views/Test/index14.vue");
-const StyleConfig = () => import("src/views/SystemConfig/StyleConfig/index.vue");
+const StyleConfig = () => import("src/views/Configuration/StyleConfig/index.vue");
 const Index22 = () => import("src/views/Test/index22.vue");
 const Index23 = () => import("src/views/Test/index23.vue");
 const Index24 = () => import("src/views/Test/index24.vue");
@@ -20,7 +20,7 @@ const Index34 = () => import("src/views/Test/index34.vue");
 const Index35 = () => import("src/views/Test/index35.vue");
 const Index = () => import("src/views/Index/index.vue");
 const RoleManagement = () =>
-  import("src/views/AccessConfiguration/RoleManagement/index.vue");
+  import("src/views/Configuration/RoleManagement/index.vue");
 // 基础路由
 export const routes = [
   {

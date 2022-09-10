@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="title">首页</div>
+    <HomeAnimation></HomeAnimation>
     <div v-for="item in btnArray" :key="item.btnName">{{ item.btnName }}</div>
   </div>
 </template>
