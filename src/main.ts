@@ -17,7 +17,7 @@ import "element-plus/dist/index.css";
 // 使用pinia状态管理库
 import { createPinia, Pinia } from "pinia";
 
-// 全局导入所有的icon
+// 全局导入所有的element-plus icon
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 const pinia: Pinia = createPinia();
 

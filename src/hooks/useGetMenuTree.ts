@@ -1,3 +1,6 @@
+/* 
+  @Description: 获取菜单树形结构
+*/
 import { PageSql } from "src/constraint/sqlsCommon";
 import { onMounted, reactive } from "vue";
 

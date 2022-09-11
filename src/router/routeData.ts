@@ -5,7 +5,7 @@ const NoPermission = () => import("src/views/401/index.vue");
 const NontFound = () => import("src/views/404/index.vue");
 const ServerError = () => import("src/views/500/index.vue");
 const Login = () => import("src/views/Login/index.vue");
-const Index11 = () => import("src/views/Test/index11.vue");
+const ModalTest = () => import("src/views/ModalTest/index.vue");
 const Index12 = () => import("src/views/Test/index12.vue");
 const Index13 = () => import("src/views/Test/index13.vue");
 const Index14 = () => import("src/views/Test/index14.vue");
@@ -46,7 +46,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/home" },
   { path: "/checkResume" },
   { path: "/upload" },
-  { path: "/index11" },
+  { path: "/ModalTest" },
   { path: "/index12" },
   {
     path: "/index13",
@@ -88,7 +88,7 @@ export const permissionsPages: Array<{ path: string }> = [
 export const components: {
   [k: string]: () => Promise<typeof import("*.vue")>;
 } = {
-  Index11,
+  ModalTest,
   Index12,
   Index13,
   Index14,

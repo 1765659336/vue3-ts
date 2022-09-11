@@ -1,3 +1,6 @@
+/* 
+  @Description：用户信息本地和store存储
+*/
 import { useUserInfoStore } from "src/store/index";
 
 export default function () {

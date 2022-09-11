@@ -15,7 +15,7 @@ export const mates: MateTable = [
   },
   { mateId: 2, icon: "", title: "home" },
   { mateId: 3, icon: "", title: "组件集" },
-  { mateId: 4, icon: "", title: "index11" },
+  { mateId: 4, icon: "", title: "模态测试" },
   { mateId: 5, icon: "", title: "index12" },
   { mateId: 6, icon: "", title: "index13" },
   { mateId: 7, icon: "", title: "系统设置" },

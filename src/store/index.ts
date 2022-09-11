@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { PageSql } from "src/constraint/sqlsCommon";
 import { IStyleVariableStore } from "src/constraint/storeCommon";
+import getBus from "src/hooks/useGetBus";
 
 // 定义菜单容器
 export const useMenuStore = defineStore("menu", {
@@ -78,4 +79,14 @@ export const useStyleVariableStore = defineStore("styleVariable", {
       this.menuMainColor = color;
     },
   },
+});
+
+// 模态管理者仓库
+export const useModalManageStore = defineStore("modalManage", {
+  state: () => {
+    const { Bus: ModalManage } = getBus();
+    return { ModalManage: new ModalManage() };
+  },
+  getters: {},
+  actions: {},
 });

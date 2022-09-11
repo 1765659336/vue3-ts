@@ -1,0 +1,29 @@
+.modal-whole-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .modal-mask {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .4);
+        z-index: 1;
+    }
+
+    .modal-content-container {
+        position: absolute;
+        border: 1px solid #ccc;
+        z-index: 2;
+        background-color: #fff;
+        width: var(--modal-content-width--);
+        height: var(--modal-content-height--);
+    }
+}
