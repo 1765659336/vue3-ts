@@ -17,13 +17,30 @@ import "element-plus/dist/index.css";
 // 使用pinia状态管理库
 import { createPinia, Pinia } from "pinia";
 
-// 全局导入所有的element-plus icon
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
-const pinia: Pinia = createPinia();
+import piniaPlugin from "./store/storeplugin";
 
+// 全局导入所有的element-plus icon
 const app = createApp(App);
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
+
+// pinia持续化存储
+const pinia: Pinia = createPinia();
+pinia.use(
+  piniaPlugin({
+    key: "pinia", // 这是给缓存到本地时，加一个特殊的前缀，以免造成污染到其他缓存数据
+    needKeep: {
+      userInfo: ["token", "userId"],
+      styleVariable: [
+        "mainColor",
+        "menuTriggerIconColor",
+        "menuTitleColor",
+        "menuMainColor",
+      ],
+    }, // 对于特定store进行持久化
+  })
+);
 
 app.use(route).use(pinia).use(ElementPlus).mount("#app");

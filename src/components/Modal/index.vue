@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="modalRef"
     class="modal-whole-container"
     v-if="modalProps.modalVisible"
     v-show="modalVisible"
@@ -21,11 +22,16 @@
       <div>
         <el-icon @click="isShowFun"><Setting /></el-icon>
         <el-icon @click="isHiddenFun"><ArrowUp /></el-icon>
-        <el-icon @click="()=>{
-          // 先执行isFullScreenFun填充全屏函数，不然isFullStyleReactive函数的if逻辑会相反
-          isFullScreenFun();
-          isFullStyleReactive();
-        }"><FullScreen /></el-icon>
+        <el-icon
+          @click="
+            () => {
+              // 先执行isFullScreenFun填充全屏函数，不然isFullStyleReactive函数的if逻辑会相反
+              isFullScreenFun();
+              isFullStyleReactive();
+            }
+          "
+          ><FullScreen
+        /></el-icon>
         <el-icon @click="isShutDownFun"><Close /></el-icon>
       </div>
       <AsyncComp></AsyncComp>
@@ -35,6 +41,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref, Ref } from "vue";
 import getModal from "./hooks/useGetModal";
 import getMask from "./hooks/useGetMask";
 import modalBtn from "./hooks/useModalBtn";
@@ -42,9 +49,8 @@ import { useModalManageStore } from "src/store";
 import useInit from "./hooks/useInit";
 import { propData, emitData } from "./index";
 import useDrag from "src/hooks/useDrag";
-import { onMounted, ref, Ref } from "vue";
 
-// 获取模态实例
+// 获取模态内容实例
 const modalContentRef: Ref<HTMLElement | null> = ref(null);
 onMounted(() => {
   if (modalContentRef.value) {

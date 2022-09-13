@@ -2,9 +2,9 @@
   @Description：缩放
 */
 export default function (
+  box: HTMLElement,
   drag: HTMLElement,
   scale: HTMLElement,
-  box: HTMLElement
 ) {
   scale.onmousedown = function (e: MouseEvent) {
     //阻止冒泡 避免缩放触发移动事件

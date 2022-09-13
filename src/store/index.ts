@@ -22,11 +22,11 @@ export const useMenuStore = defineStore("menu", {
 export const useUserInfoStore = defineStore("userInfo", {
   state: () => {
     return {
-      token: sessionStorage.getItem("token")
-        ? sessionStorage.getItem("token")
+      token: sessionStorage.getItem("pinia-userInfo-token")
+        ? sessionStorage.getItem("pinia-userInfo-token")
         : "",
-      userId: sessionStorage.getItem("userId")
-        ? sessionStorage.getItem("userId")
+      userId: sessionStorage.getItem("pinia-userInfo-userId")
+        ? sessionStorage.getItem("pinia-userInfo-userId")
         : 0,
     };
   },
@@ -46,20 +46,24 @@ export const useStyleVariableStore = defineStore("styleVariable", {
   state: () => {
     const state: IStyleVariableStore = {
       // 系统主题色
-      mainColor: sessionStorage.getItem("mainColor")
-        ? sessionStorage.getItem("mainColor")
+      mainColor: sessionStorage.getItem("pinia-styleVariable-mainColor")
+        ? sessionStorage.getItem("pinia-styleVariable-mainColor")
         : "",
       // 菜单触发图标的颜色
-      menuTriggerIconColor: sessionStorage.getItem("menuTriggerIconColor")
-        ? sessionStorage.getItem("menuTriggerIconColor")
+      menuTriggerIconColor: sessionStorage.getItem(
+        "pinia-styleVariable-menuTriggerIconColor"
+      )
+        ? sessionStorage.getItem("pinia-styleVariable-menuTriggerIconColor")
         : "",
       // 菜单标题的颜色
-      menuTitleColor: sessionStorage.getItem("menuTitleColor")
-        ? sessionStorage.getItem("menuTitleColor")
+      menuTitleColor: sessionStorage.getItem(
+        "pinia-styleVariable-menuTitleColor"
+      )
+        ? sessionStorage.getItem("pinia-styleVariable-menuTitleColor")
         : "",
       // 菜单主体的颜色
-      menuMainColor: sessionStorage.getItem("menuMainColor")
-        ? sessionStorage.getItem("menuMainColor")
+      menuMainColor: sessionStorage.getItem("pinia-styleVariable-menuMainColor")
+        ? sessionStorage.getItem("pinia-styleVariable-menuMainColor")
         : "",
     };
     return state;

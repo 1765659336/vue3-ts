@@ -32,7 +32,7 @@ const save = function () {
   changeMenuTriggerIconColor(menuTriggerIconColor.value as string);
   changeMenuTitleColor(menuTitleColor.value as string);
   changeMenuMainColor(menuMainColor.value as string);
-  postSystemStyle(Number(sessionStorage.getItem("userId")), {
+  postSystemStyle(Number(sessionStorage.getItem("pinia-userInfo-userId")), {
     mainColor: mainColor.value,
     menuTriggerIconColor: menuTriggerIconColor.value,
     menuTitleColor: menuTitleColor.value,
