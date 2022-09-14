@@ -81,3 +81,41 @@
     right: 0;
     margin: auto;
 }
+
+// 动画
+.animation-size-inflation {
+    animation: inflation .2s;
+    // 动画结束之后保持原样
+    animation-fill-mode: both;
+}
+
+@keyframes inflation {
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    25% {
+
+        transform: scale(1.1);
+
+    }
+
+    50% {
+
+        transform: scale(1.2);
+
+    }
+
+    75% {
+
+        transform: scale(1.1);
+
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
