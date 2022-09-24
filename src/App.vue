@@ -10,19 +10,16 @@
   >
     <router-view></router-view>
     <el-button type="primary" @click="createNode">弹窗弹窗</el-button>
+    <global-navigation></global-navigation>
   </div>
 </template>
 
 <script setup lang="ts">
 import useSysStyle from "./hooks/useSysStyle";
-import {
-  CustomMessage,
-  SetCustomMessageManageConfig,
-} from "src/components/CustomComponents/CustomMessage/index";
+import { CustomMessage } from "src/components/CustomComponents/CustomMessage/index";
+import GlobalNavigation from "src/components/GlobalNavigation/index.vue";
 const { StyleVariableStore } = useSysStyle();
-SetCustomMessageManageConfig(5000, false);
 const createNode = function () {
-  console.log(CustomMessage);
   CustomMessage.error("报错", 3000, true);
   CustomMessage("success", "success");
 };

@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
+import { SetCustomMessageManageConfig } from "src/components/CustomComponents/CustomMessage/index";
 // 引入全局样式文件
 import "src/assets/style/global.less";
 
@@ -43,4 +43,6 @@ pinia.use(
   })
 );
 
+// 设置CustomMessage的配置信息
+SetCustomMessageManageConfig(5000, false);
 app.use(route).use(pinia).use(ElementPlus).mount("#app");
