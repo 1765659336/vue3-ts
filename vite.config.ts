@@ -9,7 +9,7 @@ export default defineConfig({
     vue(),
     viteMockServe({
       supportTs: true,
-      mockPath: "./src/mock/"
+      mockPath: "./src/mock/",
     }),
   ],
   // 别名
@@ -33,14 +33,16 @@ export default defineConfig({
     },
   },
   // 配置代理解决跨域，我们在端口号后最前面添加上/api,vite会帮我们去请求实际目标的接口并将值返回
-  // server: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://10.1.1.252:10023',
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, '')
-  //     },
-  //   }
-  // }
+  // 配置port和host就可以跑起来，让他人在局域网下访问
+  server: {
+    port: 10010,
+    host: "0.0.0.0",
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://10.1.1.252:10023',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, '')
+    //   },
+    // }
+  },
 });
-
