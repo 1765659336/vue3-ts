@@ -1,5 +1,5 @@
+import { CustomMessage } from './../components/CustomComponents/CustomMessage/index';
 import axios, { AxiosInstance } from "axios";
-import { ElMessage } from "element-plus";
 import { useUserInfoStore } from "src/store/index";
 
 const requestDevelopment = axios.create({
@@ -10,9 +10,9 @@ const requestDevelopment = axios.create({
 // request interceptor
 requestDevelopment.interceptors.request.use(
   (config: any) => {
-    const UserInfoStore = useUserInfoStore();
-    config.headers.Authorization = UserInfoStore.token
-      ? "Basic" + UserInfoStore.token
+    const userInfoStore = useUserInfoStore();
+    config.headers.Authorization = userInfoStore.token
+      ? "Basic" + userInfoStore.token
       : "";
     return config;
   },
@@ -34,9 +34,9 @@ requestDevelopment.interceptors.response.use(
 // request interceptor
 axios.interceptors.request.use(
   (config: any) => {
-    const UserInfoStore = useUserInfoStore();
-    config.headers.Authorization = UserInfoStore.token
-      ? "Basic" + UserInfoStore.token
+    const userInfoStore = useUserInfoStore();
+    config.headers.Authorization = userInfoStore.token
+      ? "Basic" + userInfoStore.token
       : "";
     return config;
   },
@@ -49,14 +49,14 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   (response) => {
     if (response.status !== 200) {
-      ElMessage.error(response.config.url + "接口报错:" + response.status);
+      CustomMessage.error(response.config.url + "接口报错:" + response.status);
     }
     if (!response.data.status) {
-      ElMessage.error(
+      CustomMessage.error(
         response.config.url + "接口报错:" + response.data.message
       );
     } else {
-      ElMessage.success(response.config.url + "接口成功:" + response.data.message);
+      CustomMessage.success(response.config.url + "接口成功:" + response.data.message);
       return response;
     }
   },

@@ -2,7 +2,9 @@ const Home = () => import("src/views/Home/index.vue");
 const CheckResume = () => import("src/views/CheckResume/index.vue");
 const Upload = () => import("src/views/Upload/index.vue");
 const NoPermission = () => import("src/views/401/index.vue");
+// 没有找到404
 const NontFound = () => import("src/views/404/index.vue");
+// 服务器错误500
 const ServerError = () => import("src/views/500/index.vue");
 const Login = () => import("src/views/Login/index.vue");
 const ModalTest = () => import("src/views/ModalTest/index.vue");

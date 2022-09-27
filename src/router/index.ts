@@ -1,5 +1,9 @@
 import * as VueRouter from "vue-router";
-import { components, routes, permissionsPages } from "src/router/routeData";
+import {
+  components,
+  routes,
+  permissionsPages,
+} from "src/router/routeData/index";
 import { GetCurrentUserPageRoute } from "src/api/permissions";
 import { useMenuStore, useUserInfoStore } from "src/store";
 import { AxiosResponse } from "axios";
@@ -27,12 +31,12 @@ const getChildren = function (res: AxiosResponse) {
 };
 
 router.beforeEach((to: any, _from: any, next: any) => {
-  const UserInfoStore = useUserInfoStore();
+  const userInfoStore = useUserInfoStore();
   const menuStore = useMenuStore();
   // 基础路径
   if (routes.map((item) => item.path).includes(to.path)) {
     if (to.path === "/index") {
-      if (!UserInfoStore.token) {
+      if (!userInfoStore.token) {
         next("/login");
       } else {
         GetCurrentUserPageRoute().then((res) => {
@@ -45,7 +49,7 @@ router.beforeEach((to: any, _from: any, next: any) => {
     next();
   } else {
     // 判断用户是否登录
-    if (UserInfoStore.token) {
+    if (userInfoStore.token) {
       if (permissionsPages.find((item) => item.path === to.path)) {
         // 保持实时性，每次跳转路由都需要判断，当管理员修改了该用户权限时，尽管用户没有退出，也没有了之前获取的页面权限的权限了
         GetCurrentUserPageRoute().then((res) => {

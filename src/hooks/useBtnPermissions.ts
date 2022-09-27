@@ -1,5 +1,5 @@
 /* 
-  @Description：当前页面有哪些按钮的权限
+  @Description：当前用户当前页面有哪些按钮的权限
 */
 import { computed } from "vue";
 import { useMenuStore } from "src/store/index";

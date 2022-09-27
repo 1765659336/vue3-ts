@@ -1,5 +1,3 @@
-import { reactive } from "vue";
-
 <template>
   <div>
     <el-form :model="form" label-width="120px">
@@ -20,16 +18,14 @@ import { reactive } from "vue";
 import { Login, getSystemStyle } from "src/api/permissions";
 import { reactive } from "vue";
 import router from "src/router/index";
-import useSysStyle from "src/hooks/useSysStyle";
-import useUserInfo from "src/hooks/useUserInfo";
+import { useStyleVariableStore, useUserInfoStore } from "src/store/index";
 
-const { changeToken, changeUserId } = useUserInfo();
-const {
-  changeMainColor,
-  changeMenuTriggerIconColor,
-  changeMenuTitleColor,
-  changeMenuMainColor,
-} = useSysStyle();
+// 获取全局样式变量仓库
+const styleVariableStore = useStyleVariableStore();
+// 获取用户信息容器
+const userInfoStore = useUserInfoStore();
+
+// 表单数据
 const form = reactive({
   userName: "",
   passWord: "",
@@ -38,13 +34,15 @@ const form = reactive({
 const onSubmit = function () {
   Login(form).then((res) => {
     const { token, userId } = res.data.content;
-    changeToken(token);
-    changeUserId(userId);
+    userInfoStore.changeToken(token);
+    userInfoStore.changeUserId(userId);
     getSystemStyle(userId).then((res) => {
-      changeMainColor(res.data.content.mainColor);
-      changeMenuTriggerIconColor(res.data.content.menuTriggerIconColor);
-      changeMenuTitleColor(res.data.content.menuTitleColor);
-      changeMenuMainColor(res.data.content.menuMainColor);
+      styleVariableStore.changeMainColor(res.data.content.mainColor);
+      styleVariableStore.changeMenuTriggerIconColor(
+        res.data.content.menuTriggerIconColor
+      );
+      styleVariableStore.changeMenuTitleColor(res.data.content.menuTitleColor);
+      styleVariableStore.changeMenuMainColor(res.data.content.menuMainColor);
     });
 
     /* 

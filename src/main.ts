@@ -45,4 +45,7 @@ pinia.use(
 
 // 设置CustomMessage的配置信息
 SetCustomMessageManageConfig(5000, false);
+
+
+// 注册
 app.use(route).use(pinia).use(ElementPlus).mount("#app");
