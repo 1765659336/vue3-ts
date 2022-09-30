@@ -27,4 +27,5 @@ export const mates: MateTable = [
   { mateId: 13, icon: "", title: "角色管理" },
   { mateId: 14, icon: "", title: "index3" },
   { mateId: 15, icon: "", title: "index35" },
+  { mateId: 16, icon: "", title: "CustomSignatureTest" },
 ];

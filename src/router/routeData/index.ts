@@ -11,7 +11,8 @@ const ModalTest = () => import("src/views/ModalTest/index.vue");
 const Index12 = () => import("src/views/Test/index12.vue");
 const Index13 = () => import("src/views/Test/index13.vue");
 const Index14 = () => import("src/views/Test/index14.vue");
-const StyleConfig = () => import("src/views/Configuration/StyleConfig/index.vue");
+const StyleConfig = () =>
+  import("src/views/Configuration/StyleConfig/index.vue");
 const Index22 = () => import("src/views/Test/index22.vue");
 const Index23 = () => import("src/views/Test/index23.vue");
 const Index24 = () => import("src/views/Test/index24.vue");
@@ -21,8 +22,12 @@ const Index33 = () => import("src/views/Test/index33.vue");
 const Index34 = () => import("src/views/Test/index34.vue");
 const Index35 = () => import("src/views/Test/index35.vue");
 const Index = () => import("src/views/Index/index.vue");
+// 角色管理
 const RoleManagement = () =>
   import("src/views/Configuration/RoleManagement/index.vue");
+// 签名组件测试页面
+const CustomSignatureTest = () =>
+  import("src/views/ComponentsTest/CustomSignatureTest/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -84,6 +89,7 @@ export const permissionsPages: Array<{ path: string }> = [
     path: "/RoleManagement",
   },
   { path: "/Index35" },
+  { path: "/CustomSignatureTest" },
 ];
 
 // 远程可配置页面
@@ -108,4 +114,5 @@ export const components: {
   Index,
   RoleManagement,
   Index35,
+  CustomSignatureTest,
 };

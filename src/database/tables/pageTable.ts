@@ -11,7 +11,7 @@ import { PageTable } from "src/constraint/tablesCommon";
   @pageId: 主键id
   @level: ?级菜单
 */
-export const pages:PageTable = [
+export const pages: PageTable = [
   {
     component: "",
     mateId: 1,
@@ -145,6 +145,15 @@ export const pages:PageTable = [
     parentPageId: 5,
     path: "/Index35",
     pageId: 501,
+    level: 2,
+  },
+  {
+    component: "CustomSignatureTest",
+    mateId: 16,
+    name: "CustomSignatureTest",
+    parentPageId: 5,
+    path: "/CustomSignatureTest",
+    pageId: 502,
     level: 2,
   },
 ];
