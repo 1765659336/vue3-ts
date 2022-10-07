@@ -1,0 +1,28 @@
+// 整个组件的高度
+@wholeHeight: 16px;
+
+.container {
+    align-items: center;
+    display: flex;
+    height: @wholeHeight;
+    width: 300px;
+}
+
+.left {
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.knob {
+    height: @wholeHeight;
+    width: @wholeHeight;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.right {
+    flex: 1;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+}

@@ -20,7 +20,7 @@ const Index31 = () => import("src/views/Test/index31.vue");
 const Index32 = () => import("src/views/Test/index32.vue");
 const Index33 = () => import("src/views/Test/index33.vue");
 const Index34 = () => import("src/views/Test/index34.vue");
-const Index35 = () => import("src/views/Test/index35.vue");
+
 const Index = () => import("src/views/Index/index.vue");
 // 角色管理
 const RoleManagement = () =>
@@ -28,6 +28,9 @@ const RoleManagement = () =>
 // 签名组件测试页面
 const CustomSignatureTest = () =>
   import("src/views/ComponentsTest/CustomSignatureTest/index.vue");
+// 滑块组件测试页面
+const CustomSlider = () =>
+  import("src/views/ComponentsTest/CustomSlider/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -90,6 +93,7 @@ export const permissionsPages: Array<{ path: string }> = [
   },
   { path: "/Index35" },
   { path: "/CustomSignatureTest" },
+  { path: "/CustomSlider" },
 ];
 
 // 远程可配置页面
@@ -113,6 +117,6 @@ export const components: {
   Home,
   Index,
   RoleManagement,
-  Index35,
+  CustomSlider,
   CustomSignatureTest,
 };
