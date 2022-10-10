@@ -26,6 +26,7 @@ export const mates: MateTable = [
   { mateId: 12, icon: "", title: "权限" },
   { mateId: 13, icon: "", title: "角色管理" },
   { mateId: 14, icon: "", title: "index3" },
-  { mateId: 15, icon: "", title: "自定义滑块" },
-  { mateId: 16, icon: "", title: "自定义画板" },
+  { mateId: 15, icon: "", title: "自定义滑块测试" },
+  { mateId: 16, icon: "", title: "自定义画板测试" },
+  { mateId: 17, icon: "", title: "指令copy测试" },
 ];

@@ -156,4 +156,13 @@ export const pages: PageTable = [
     pageId: 502,
     level: 2,
   },
+  {
+    component: "InstructionsCopy",
+    mateId: 17,
+    name: "InstructionsCopy",
+    parentPageId: 5,
+    path: "/InstructionsCopy",
+    pageId: 503,
+    level: 2,
+  },
 ];

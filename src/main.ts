@@ -8,7 +8,7 @@ import "src/assets/style/global.less";
 import "src/assets/style/reset.css";
 
 // 使用vue-router4
-import route from "./router/index";
+import route from "src/router/index";
 
 // 全局注册element-plus
 import ElementPlus from "element-plus";
@@ -18,7 +18,7 @@ import "element-plus/dist/index.css";
 import { createPinia, Pinia } from "pinia";
 
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
-import piniaPlugin from "./store/storeplugin";
+import piniaPlugin from "src/store/storeplugin";
 
 // 全局导入所有的element-plus icon
 const app = createApp(App);
@@ -46,6 +46,8 @@ pinia.use(
 // 设置CustomMessage的配置信息
 SetCustomMessageManageConfig(5000, false);
 
+// 全局注册自定义指令
+import Directives from 'src/v_instructions'
 
 // 注册
-app.use(route).use(pinia).use(ElementPlus).mount("#app");
+app.use(route).use(pinia).use(ElementPlus).use(Directives).mount("#app");
