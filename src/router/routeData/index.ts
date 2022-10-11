@@ -34,6 +34,9 @@ const CustomSlider = () =>
 // 自定义指令v-copy测试页面
 const InstructionsCopy = () =>
   import("src/views/InstructionsTest/InstructionsCopy/index.vue");
+// 自定义指令v-realImg测试页面
+const InstructionsRealImg = () =>
+  import("src/views/InstructionsTest/InstructionsRealImg/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -98,6 +101,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomSignatureTest" },
   { path: "/CustomSlider" },
   { path: "/InstructionsCopy" },
+  { path: "/InstructionsRealImg" },
 ];
 
 // 远程可配置页面
@@ -123,5 +127,6 @@ export const components: {
   RoleManagement,
   CustomSlider,
   CustomSignatureTest,
-  InstructionsCopy
+  InstructionsCopy,
+  InstructionsRealImg,
 };

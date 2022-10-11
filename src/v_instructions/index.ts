@@ -1,7 +1,9 @@
 import copy from "./Copy";
+import realImg from "./RealImg"
 // 自定义指令
 const directives: { [k: string]: any } = {
   copy,
+  realImg
 };
 
 export default {
