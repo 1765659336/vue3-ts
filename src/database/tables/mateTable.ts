@@ -30,4 +30,5 @@ export const mates: MateTable = [
   { mateId: 16, icon: "", title: "自定义画板测试" },
   { mateId: 17, icon: "", title: "自定义指令copy测试" },
   { mateId: 18, icon: "", title: "自定义指令realImg测试" },
+  { mateId: 19, icon: "", title: "自定义指令loading测试" },
 ];

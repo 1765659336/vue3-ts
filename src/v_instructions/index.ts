@@ -1,9 +1,11 @@
 import copy from "./Copy";
-import realImg from "./RealImg"
+import loading from "./Loading";
+import realImg from "./RealImg";
 // 自定义指令
 const directives: { [k: string]: any } = {
   copy,
-  realImg
+  realImg,
+  loading,
 };
 
 export default {

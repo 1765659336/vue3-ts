@@ -174,4 +174,13 @@ export const pages: PageTable = [
     pageId: 504,
     level: 2,
   },
+  {
+    component: "InstructionsLoading",
+    mateId: 19,
+    name: "InstructionsLoading",
+    parentPageId: 5,
+    path: "/InstructionsLoading",
+    pageId: 505,
+    level: 2,
+  },
 ];
