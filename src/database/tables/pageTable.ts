@@ -183,4 +183,13 @@ export const pages: PageTable = [
     pageId: 505,
     level: 2,
   },
+  {
+    component: "CustomEcharts",
+    mateId: 20,
+    name: "CustomEcharts",
+    parentPageId: 5,
+    path: "/CustomEcharts",
+    pageId: 506,
+    level: 2,
+  },
 ];

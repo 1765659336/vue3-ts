@@ -40,6 +40,9 @@ const InstructionsRealImg = () =>
 // 自定义指令v-loading测试页面
 const InstructionsLoading = () =>
   import("src/views/InstructionsTest/InstructionsLoading/index.vue");
+// Echart测试页面
+const CustomEcharts = () =>
+  import("src/views/ComponentsTest/CustomEcharts/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -106,6 +109,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/InstructionsCopy" },
   { path: "/InstructionsRealImg" },
   { path: "/InstructionsLoading" },
+  { path: "/CustomEcharts" },
 ];
 
 // 远程可配置页面
@@ -133,5 +137,6 @@ export const components: {
   CustomSignatureTest,
   InstructionsCopy,
   InstructionsRealImg,
-  InstructionsLoading
+  InstructionsLoading,
+  CustomEcharts,
 };

@@ -12,6 +12,7 @@
     "dependencies": {
         "@jsdawn/vue3-tinymce": "^1.1.7",
         "axios": "^0.27.2",
+        "echarts": "^5.4.0",
         "element-plus": "^2.2.14",
         "less": "^4.1.3",
         "less-loader": "^11.0.0",
