@@ -5,7 +5,7 @@ export default function (
   knob: Ref<HTMLDivElement>,
   left: Ref<HTMLDivElement>,
   container: Ref<HTMLDivElement>,
-  props: any
+  props: any,
 ) {
   // 当前鼠标位置
   let mouseX = ref(0);
@@ -13,9 +13,13 @@ export default function (
   // 滑块距离左侧的距离
   let leftWidth = ref(0);
 
+  // 数字输入框绑定的值
+  const elInputNumberValue = ref(props.sliderValue);
+
   // 修改滑块的位置以及修改滑块的值
   const changeSliderValue = function (newLeftWidth: number) {
     left.value.style.width = `${newLeftWidth}%`;
+    elInputNumberValue.value = newLeftWidth;
     emits("update:sliderValue", newLeftWidth);
   };
 
@@ -68,6 +72,7 @@ export default function (
   });
 
   return {
-    changeSliderValue
+    changeSliderValue,
+    elInputNumberValue
   };
 }

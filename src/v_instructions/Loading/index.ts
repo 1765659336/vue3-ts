@@ -93,7 +93,7 @@ function insertDom(el, instance, binding) {
     bottom: 0,
     "z-index": 1000,
     "background-color": "rgba(0, 0, 0, 0.3)",
-    display: "flex",
+    "display": "flex",
     "justify-content": "center",
     "align-items": "center",
     "flex-direction": "column",

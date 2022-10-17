@@ -55,8 +55,14 @@ const props = defineProps({
   },
 });
 const emits = defineEmits(["update:sliderValue"]);
-const { changeSliderValue } = useMain(emits, knob, left, container, props);
-const elInputNumberValue = ref(props.sliderValue);
+const { changeSliderValue, elInputNumberValue } = useMain(
+  emits,
+  knob,
+  left,
+  container,
+  props
+);
+
 watch(
   () => elInputNumberValue.value,
   (newValue) => {
