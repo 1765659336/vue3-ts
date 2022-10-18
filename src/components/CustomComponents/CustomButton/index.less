@@ -1,0 +1,234 @@
+.custom-button {
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #606266;
+    // 行内块需要设置行高，因为content占据的高度不是你设置的字体高度，而是你设置的行高
+    line-height: 14px;
+    cursor: pointer;
+  }
+  
+  // 圆角按钮样式
+  .custom-button.is-round {
+    border-radius: 20px;
+  }
+  
+  // 圆形按钮样式
+  .custom-button.is-circle {
+    border-radius: 50%;
+    // 然后还需要将padding都设为一样，成为一个正方形
+    padding: 8px;
+  }
+  
+  // 加载中
+  .custom-button.is-loading {
+    // 禁用鼠标事件
+    pointer-events: none;
+  }
+  
+  // 按钮类型type样式
+  .custom-button-default {
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+  }
+  
+  .custom-button-primary {
+    background-color: #409eff;
+    border: 1px solid #409eff;
+    color: #fff;
+  }
+  
+  .custom-button-success {
+    background-color: #67c23a;
+    border: 1px solid #67c23a;
+    color: #fff;
+  }
+  
+  .custom-button-info {
+    background-color: #909399;
+    border: 1px solid #909399;
+    color: #fff;
+  }
+  
+  .custom-button-warning {
+    background-color: #e6a23c;
+    border: 1px solid #e6a23c;
+    color: #fff;
+  }
+  
+  .custom-button-danger {
+    background-color: #f78989;
+    border: 1px solid #f78989;
+    color: #fff;
+  }
+  
+  // 鼠标移入样式
+  .custom-button-default:hover,
+  .custom-button-default:focus {
+    background-color: #ecf5ff;
+    color: #409eff;
+  }
+  .custom-button-primary:hover,
+  .custom-button-primary:focus,
+  .custom-button-success:hover,
+  .custom-button-success:focus,
+  .custom-button-info:hover,
+  .custom-button-info:focus,
+  .custom-button-warning:hover,
+  .custom-button-warning:focus,
+  .custom-button-danger:hover,
+  .custom-button-danger:focus
+   {
+    opacity: 0.8;
+  }
+  
+  // 朴素按钮样式
+  .custom-button-primary.is-plain {
+    color: #409eff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+  }
+  
+  .custom-button-success.is-plain {
+    color: #67c23a;
+    background: #f0f9eb;
+    border-color: #c2e7b0;
+  }
+  
+  .custom-button-info.is-plain {
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6;
+  }
+  
+  .custom-button-warning.is-plain {
+    color: #e6a23c;
+    background: #fdf6ec;
+    border-color: #f5dab1;
+  }
+  
+  .custom-button-danger.is-plain {
+    color: #f56c6c;
+    background: #fef0f0;
+    border-color: #fbc4c4;
+  }
+  
+  // 朴素按钮鼠标移入样式
+  .custom-button-default.is-plain:hover {
+    background: #fff;
+    border-color: #409eff;
+    color: #409eff;
+  }
+  
+  .custom-button-primary.is-plain:hover {
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
+  }
+  
+  .custom-button-success.is-plain:hover {
+    background: #67c23a;
+    border-color: #67c23a;
+    color: #fff;
+  }
+  
+  .custom-button-info.is-plain:hover {
+    background: #909399;
+    border-color: #909399;
+    color: #fff;
+  }
+  
+  .custom-button-warning.is-plain:hover {
+    background: #e6a23c;
+    border-color: #e6a23c;
+    color: #fff;
+  }
+  
+  .custom-button-danger.is-plain:hover {
+    background: #f56c6c;
+    border-color: #f56c6c;
+    color: #fff;
+  }
+  
+  // disabled的样式的优先级与前面涉及到按钮颜色的is-plain和type比起来要大
+  .custom-button-default.is-disabled,
+  .custom-button-default.is-disabled:focus,
+  .custom-button-default.is-disabled:hover {
+    background-color: #fff;
+    border-color: #ebeef5;
+    color: #c0c4cc;
+  }
+  
+  .custom-button-primary.is-disabled,
+  .custom-button-primary.is-disabled:active,
+  .custom-button-primary.is-disabled:focus,
+  .custom-button-primary.is-disabled:hover {
+    color: #8cc5ff;
+    background-color: #ecf5ff;
+    border-color: #d9ecff;
+  }
+  
+  .custom-button-success.is-disabled,
+  .custom-button-success.is-disabled:active,
+  .custom-button-success.is-disabled:focus,
+  .custom-button-success.is-disabled:hover {
+    color: #a4da89;
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+  }
+  
+  .custom-button-info.is-disabled,
+  .custom-button-info.is-disabled:active,
+  .custom-button-info.is-disabled:focus,
+  .custom-button-info.is-disabled:hover {
+    color: #bcbec2;
+    background-color: #f4f4f5;
+    border-color: #e9e9eb;
+  }
+  
+  .custom-button-warning.is-disabled,
+  .custom-button-warning.is-disabled:active,
+  .custom-button-warning.is-disabled:focus,
+  .custom-button-warning.is-disabled:hover {
+    color: #f0c78a;
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+  }
+  
+  .custom-button-danger.is-disabled,
+  .custom-button-danger.is-disabled:active,
+  .custom-button-danger.is-disabled:focus,
+  .custom-button-danger.is-disabled:hover {
+    color: #f9a7a7;
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+  }
+  
+  // 禁用按钮的鼠标事件
+  .custom-button.is-disabled,
+  .custom-button.is-disabled:focus,
+  .custom-button.is-disabled:hover {
+    cursor: not-allowed;
+  }
+  
+  // 按钮尺寸
+  .custom-button-medium {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .custom-button-small {
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  
+  .custom-button-mini {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }

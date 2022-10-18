@@ -192,4 +192,13 @@ export const pages: PageTable = [
     pageId: 506,
     level: 2,
   },
+  {
+    component: "CustomButton",
+    mateId: 21,
+    name: "CustomButton",
+    parentPageId: 5,
+    path: "/CustomButton",
+    pageId: 507,
+    level: 2,
+  }
 ];
