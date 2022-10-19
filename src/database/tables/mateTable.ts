@@ -31,6 +31,7 @@ export const mates: MateTable = [
   { mateId: 17, icon: "", title: "自定义指令copy测试" },
   { mateId: 18, icon: "", title: "自定义指令realImg测试" },
   { mateId: 19, icon: "", title: "自定义指令loading测试" },
-  { mateId: 20, icon: "", title: "自定义Echarts组件" },
-  { mateId: 21, icon: "", title: "自定义Button按钮组件" },
+  { mateId: 20, icon: "", title: "二次封装Echarts组件测试" },
+  { mateId: 21, icon: "", title: "自定义Button按钮组件测试" },
+  { mateId: 22, icon: "", title: "自定义Rate评分组件测试" },
 ];

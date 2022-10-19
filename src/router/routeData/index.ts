@@ -46,6 +46,9 @@ const CustomEcharts = () =>
 // 自定义按钮测试页面
 const CustomButton = () =>
   import("src/views/ComponentsTest/CustomButton/index.vue");
+// 自定义评分组件测试页面
+const CustomRate = () =>
+  import("src/views/ComponentsTest/CustomRate/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -114,6 +117,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/InstructionsLoading" },
   { path: "/CustomEcharts" },
   { path: "/CustomButton" },
+  { path: "/CustomRate" },
 ];
 
 // 远程可配置页面
@@ -143,5 +147,6 @@ export const components: {
   InstructionsRealImg,
   InstructionsLoading,
   CustomEcharts,
-  CustomButton
+  CustomButton,
+  CustomRate,
 };
