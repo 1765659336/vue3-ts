@@ -7,7 +7,7 @@
     v-loading="props.loading"
   >
     <!-- 当默认插槽传递了内容时，再渲染span标签。否则就不渲染 -->
-    <span v-if="currentInstance.slots.default"><slot></slot></span>
+    <span v-if="currentInstance?.slots.default"><slot></slot></span>
   </button>
 </template>
 
@@ -56,7 +56,7 @@ const emits = defineEmits(["click"]);
 
 const currentInstance = getCurrentInstance();
 
-const handleClick = function (e: PointerEvent) {
+const handleClick = function (e: MouseEvent) {
   emits("click", e);
 };
 const buttonClassArr = reactive([

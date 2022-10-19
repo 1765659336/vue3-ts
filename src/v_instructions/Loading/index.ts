@@ -92,8 +92,7 @@ function insertDom(el, instance, binding) {
     right: 0,
     bottom: 0,
     "z-index": 1000,
-    "background-color": "rgba(0, 0, 0, 0.3)",
-    "display": "flex",
+    display: "flex",
     "justify-content": "center",
     "align-items": "center",
     "flex-direction": "column",
@@ -105,6 +104,8 @@ function insertDom(el, instance, binding) {
   if (!["fixed", "absolute", "relative"].includes(getStyle(el, "position"))) {
     el.style.position = "relative";
   }
+  // 修改父元素的背景色
+  el.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
   // 插入dom
   el.appendChild(instance);
   // 表明dom已插入

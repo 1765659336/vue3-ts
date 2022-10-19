@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import CustomButton from "src/components/CustomComponents/CustomButton/index.vue";
 
-const btnClick = function (e: PointerEvent) {
+const btnClick = function (e: MouseEvent) {
   console.log("按钮", e);
 };
 </script>
