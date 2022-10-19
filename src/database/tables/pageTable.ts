@@ -210,4 +210,22 @@ export const pages: PageTable = [
     pageId: 508,
     level: 2,
   },
+  {
+    component: "CustomTransfer",
+    mateId: 23,
+    name: "CustomTransfer",
+    parentPageId: 5,
+    path: "/CustomTransfer",
+    pageId: 509,
+    level: 2,
+  },
+  {
+    component: "CustomCheckbox",
+    mateId: 24,
+    name: "CustomCheckbox",
+    parentPageId: 5,
+    path: "/CustomCheckbox",
+    pageId: 5010,
+    level: 2,
+  },
 ];

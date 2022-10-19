@@ -49,6 +49,12 @@ const CustomButton = () =>
 // 自定义评分组件测试页面
 const CustomRate = () =>
   import("src/views/ComponentsTest/CustomRate/index.vue");
+// 自定义穿梭框测试页面
+const CustomTransfer = () =>
+  import("src/views/ComponentsTest/CustomTransfer/index.vue");
+// 自定义复选框组件测试页面
+const CustomCheckbox = () =>
+  import("src/views/ComponentsTest/CustomCheckbox/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -118,6 +124,8 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomEcharts" },
   { path: "/CustomButton" },
   { path: "/CustomRate" },
+  { path: "/CustomTransfer" },
+  { path: "/CustomCheckbox" },
 ];
 
 // 远程可配置页面
@@ -149,4 +157,6 @@ export const components: {
   CustomEcharts,
   CustomButton,
   CustomRate,
+  CustomTransfer,
+  CustomCheckbox,
 };

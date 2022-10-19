@@ -34,4 +34,6 @@ export const mates: MateTable = [
   { mateId: 20, icon: "", title: "二次封装Echarts组件测试" },
   { mateId: 21, icon: "", title: "自定义Button按钮组件测试" },
   { mateId: 22, icon: "", title: "自定义Rate评分组件测试" },
+  { mateId: 23, icon: "", title: "自定义Transfer穿梭框组件测试" },
+  { mateId: 24, icon: "", title: "自定义Checkbox复选框组件测试" },
 ];

@@ -12,7 +12,11 @@
 </template>
 
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, reactive } from "vue";
+import { getCurrentInstance, onMounted, PropType, reactive } from "vue";
+
+defineOptions({
+  name: "CustomButton",
+});
 
 const props = defineProps({
   // 按钮类型
@@ -43,8 +47,9 @@ const props = defineProps({
     default: false,
   },
   nativeType: {
-    type: String,
+    type: Object as PropType<"button" | "submit" | "reset">,
     default: "button",
+    required: true,
   },
   autofocus: {
     type: Boolean,
