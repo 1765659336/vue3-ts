@@ -55,6 +55,10 @@ const CustomTransfer = () =>
 // 自定义复选框组件测试页面
 const CustomCheckbox = () =>
   import("src/views/ComponentsTest/CustomCheckbox/index.vue");
+// 自定义开关组件测试页面
+const CustomSwitch = () =>
+  import("src/views/ComponentsTest/CustomSwitch/index.vue");
+
 // 基础路由
 export const routes = [
   {
@@ -126,6 +130,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomRate" },
   { path: "/CustomTransfer" },
   { path: "/CustomCheckbox" },
+  { path: "/CustomSwitch" },
 ];
 
 // 远程可配置页面
@@ -159,4 +164,5 @@ export const components: {
   CustomRate,
   CustomTransfer,
   CustomCheckbox,
+  CustomSwitch,
 };

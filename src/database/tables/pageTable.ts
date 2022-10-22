@@ -228,4 +228,13 @@ export const pages: PageTable = [
     pageId: 5010,
     level: 2,
   },
+  {
+    component: "CustomSwitch",
+    mateId: 25,
+    name: "CustomSwitch",
+    parentPageId: 5,
+    path: "/CustomSwitch",
+    pageId: 5011,
+    level: 2,
+  },
 ];
