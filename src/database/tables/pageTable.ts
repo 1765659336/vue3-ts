@@ -237,4 +237,13 @@ export const pages: PageTable = [
     pageId: 5011,
     level: 2,
   },
+  {
+    component: "CustomTag",
+    mateId: 26,
+    name: "CustomTag",
+    parentPageId: 5,
+    path: "/CustomTag",
+    pageId: 5012,
+    level: 2,
+  },
 ];

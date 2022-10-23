@@ -1,1 +1,0 @@
-export type headerOperationArrItem = 'add' | 'update' | 'delete';
