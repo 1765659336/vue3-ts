@@ -246,4 +246,13 @@ export const pages: PageTable = [
     pageId: 5012,
     level: 2,
   },
+  {
+    component: "CustomTimeline",
+    mateId: 27,
+    name: "CustomTimeline",
+    parentPageId: 5,
+    path: "/CustomTimeline",
+    pageId: 5013,
+    level: 2,
+  },
 ];
