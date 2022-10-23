@@ -63,6 +63,9 @@ const CustomTag = () => import("src/views/ComponentsTest/CustomTag/index.vue");
 // 自定义时间轴组件测试页面
 const CustomTimeline = () =>
   import("src/views/ComponentsTest/CustomTimeLine/index.vue");
+// 自定义布容器组件测试页面
+const CustomContainer = () =>
+  import("src/views/ComponentsTest/CustomCantainer/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -137,6 +140,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomSwitch" },
   { path: "/CustomTag" },
   { path: "/CustomTimeline" },
+  { path: "/CustomContainer" },
 ];
 
 // 远程可配置页面
@@ -173,4 +177,5 @@ export const components: {
   CustomSwitch,
   CustomTag,
   CustomTimeline,
+  CustomContainer,
 };

@@ -255,4 +255,13 @@ export const pages: PageTable = [
     pageId: 5013,
     level: 2,
   },
+  {
+    component: "CustomContainer",
+    mateId: 28,
+    name: "CustomContainer",
+    parentPageId: 5,
+    path: "/CustomContainer",
+    pageId: 5014,
+    level: 2,
+  },
 ];
