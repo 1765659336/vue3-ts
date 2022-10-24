@@ -282,4 +282,13 @@ export const pages: PageTable = [
     pageId: 5016,
     level: 2,
   },
+  {
+    component: "CustomAffix",
+    mateId: 31,
+    name: "CustomAffix",
+    parentPageId: 5,
+    path: "/CustomAffix",
+    pageId: 5017,
+    level: 2,
+  },
 ];
