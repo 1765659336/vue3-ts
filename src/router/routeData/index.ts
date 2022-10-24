@@ -72,6 +72,9 @@ const CustomLink = () =>
 // 自定义徽章组件测试页面
 const CustomBadge = () =>
   import("src/views/ComponentsTest/CustomBadge/index.vue");
+// 自定义固钉组件测试页面
+const CustomAffix = () =>
+  import("src/views/ComponentsTest/CustomAffix/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -148,6 +151,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomContainer" },
   { path: "/CustomLink" },
   { path: "/CustomBadge" },
+  { path: "/CustomAffix" },
 ];
 
 // 远程可配置页面
@@ -187,4 +191,5 @@ export const components: {
   CustomContainer,
   CustomLink,
   CustomBadge,
+  CustomAffix
 };
