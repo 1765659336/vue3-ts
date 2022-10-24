@@ -40,4 +40,5 @@ export const mates: MateTable = [
   { mateId: 26, icon: "", title: "自定义Tag标签组件测试" },
   { mateId: 27, icon: "", title: "自定义TimeLine时间轴组件测试" },
   { mateId: 28, icon: "", title: "自定义Container容器组件测试" },
+  { mateId: 29, icon: "", title: "自定义Link文字链接组件测试" },
 ];

@@ -264,4 +264,13 @@ export const pages: PageTable = [
     pageId: 5014,
     level: 2,
   },
+  {
+    component: "CustomLink",
+    mateId: 29,
+    name: "CustomLink",
+    parentPageId: 5,
+    path: "/CustomLink",
+    pageId: 5015,
+    level: 2,
+  },
 ];
