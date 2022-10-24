@@ -1,0 +1,31 @@
+@font-size: var(--custom-badge-font-size--);
+
+@font-number: var(--custom-badge-font-number--);
+
+.custom-badge-container {
+  position: relative;
+  display: inline-block;
+
+  .custom-badge-icon {
+    font-size: @font-size;
+    position: absolute;
+    // 设置半圆要等于垂直方向占据的高度，(height + padding-top-bottom) / 2
+    border-radius: calc(@font-size / 2 + 2px);
+    top: calc(@font-size / 2 * -1);
+    right: calc(@font-number * @font-size / 2 * -1);
+    background-color: var(--custom-badge-background-color--);
+  }
+
+  .custom-badge-icon-text {
+    display: inline-block;
+    min-width: @font-size;
+    max-width: calc(3 * @font-size);
+    height: @font-size;
+    overflow: hidden; //超出的文本隐藏
+    text-overflow: ellipsis; //溢出用省略号显示
+    white-space: nowrap; //溢出不换行
+    color: var(--custom-badge-color--);
+    padding: 2px 2px;
+    line-height: @font-size;
+  }
+}

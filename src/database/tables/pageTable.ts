@@ -273,4 +273,13 @@ export const pages: PageTable = [
     pageId: 5015,
     level: 2,
   },
+  {
+    component: "CustomBadge",
+    mateId: 30,
+    name: "CustomBadge",
+    parentPageId: 5,
+    path: "/CustomBadge",
+    pageId: 5016,
+    level: 2,
+  },
 ];

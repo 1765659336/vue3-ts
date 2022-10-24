@@ -66,10 +66,12 @@ const CustomTimeline = () =>
 // 自定义布容器组件测试页面
 const CustomContainer = () =>
   import("src/views/ComponentsTest/CustomCantainer/index.vue");
-// 自定义文字链接测试页面
+// 自定义文字链接组件测试页面
 const CustomLink = () =>
   import("src/views/ComponentsTest/CustomLink/index.vue");
-// 自定义
+// 自定义徽章组件测试页面
+const CustomBadge = () =>
+  import("src/views/ComponentsTest/CustomBadge/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -145,6 +147,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomTimeline" },
   { path: "/CustomContainer" },
   { path: "/CustomLink" },
+  { path: "/CustomBadge" },
 ];
 
 // 远程可配置页面
@@ -183,4 +186,5 @@ export const components: {
   CustomTimeline,
   CustomContainer,
   CustomLink,
+  CustomBadge,
 };
