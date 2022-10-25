@@ -75,6 +75,9 @@ const CustomBadge = () =>
 // 自定义固钉组件测试页面
 const CustomAffix = () =>
   import("src/views/ComponentsTest/CustomAffix/index.vue");
+// 自定义折叠面板测试页面
+const CustomCollapse = () =>
+  import("src/views/ComponentsTest/CustomCollapse/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -152,6 +155,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomLink" },
   { path: "/CustomBadge" },
   { path: "/CustomAffix" },
+  { path: "/CustomCollapse" },
 ];
 
 // 远程可配置页面
@@ -191,5 +195,6 @@ export const components: {
   CustomContainer,
   CustomLink,
   CustomBadge,
-  CustomAffix
+  CustomAffix,
+  CustomCollapse,
 };

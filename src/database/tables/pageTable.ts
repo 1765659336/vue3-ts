@@ -291,4 +291,13 @@ export const pages: PageTable = [
     pageId: 5017,
     level: 2,
   },
+  {
+    component: "CustomCollapse",
+    mateId: 32,
+    name: "CustomCollapse",
+    parentPageId: 5,
+    path: "/CustomCollapse",
+    pageId: 5018,
+    level: 2,
+  },
 ];
