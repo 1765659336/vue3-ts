@@ -44,4 +44,5 @@ export const mates: MateTable = [
   { mateId: 30, icon: "", title: "自定义Badge徽章组件测试" },
   { mateId: 31, icon: "", title: "自定义Affix固钉组件测试" },
   { mateId: 32, icon: "", title: "自定义CustomCollapse折叠面板组件测试" },
+  { mateId: 33, icon: "", title: "自定义CustomBackTop回到顶部组件测试" },
 ];

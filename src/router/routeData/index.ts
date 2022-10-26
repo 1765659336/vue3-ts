@@ -78,6 +78,9 @@ const CustomAffix = () =>
 // 自定义折叠面板测试页面
 const CustomCollapse = () =>
   import("src/views/ComponentsTest/CustomCollapse/index.vue");
+// 自定义回到顶部组件测试页面
+const CustomBackTop = () =>
+  import("src/views/ComponentsTest/CustomBackTop/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -104,39 +107,17 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/upload" },
   { path: "/ModalTest" },
   { path: "/index12" },
-  {
-    path: "/index13",
-  },
-  {
-    path: "/index14",
-  },
-  {
-    path: "/StyleConfig",
-  },
-  {
-    path: "/index22",
-  },
-  {
-    path: "/index23",
-  },
-  {
-    path: "/index24",
-  },
-  {
-    path: "/index31",
-  },
-  {
-    path: "/index32",
-  },
-  {
-    path: "/index33",
-  },
-  {
-    path: "/index34",
-  },
-  {
-    path: "/RoleManagement",
-  },
+  { path: "/index13" },
+  { path: "/index14" },
+  { path: "/StyleConfig" },
+  { path: "/index22" },
+  { path: "/index23" },
+  { path: "/index24" },
+  { path: "/index31" },
+  { path: "/index32" },
+  { path: "/index33" },
+  { path: "/index34" },
+  { path: "/RoleManagement" },
   { path: "/Index35" },
   { path: "/CustomSignatureTest" },
   { path: "/CustomSlider" },
@@ -156,6 +137,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomBadge" },
   { path: "/CustomAffix" },
   { path: "/CustomCollapse" },
+  { path: "/CustomBackTop" },
 ];
 
 // 远程可配置页面
@@ -197,4 +179,5 @@ export const components: {
   CustomBadge,
   CustomAffix,
   CustomCollapse,
+  CustomBackTop,
 };

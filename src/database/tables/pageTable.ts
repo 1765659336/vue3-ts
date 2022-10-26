@@ -300,4 +300,13 @@ export const pages: PageTable = [
     pageId: 5018,
     level: 2,
   },
+  {
+    component: "CustomBackTop",
+    mateId: 33,
+    name: "CustomBackTop",
+    parentPageId: 5,
+    path: "/CustomBackTop",
+    pageId: 5019,
+    level: 2,
+  },
 ];
