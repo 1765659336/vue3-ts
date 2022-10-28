@@ -3,11 +3,7 @@
     class="custom-popover-container"
     :style="{ '--custom-popover-reference-width--': minWidth }"
   >
-    <div
-      class="custom-popover-reference"
-      @click="showChange"
-      ref="customPopoverReferenceRef"
-    >
+    <div class="custom-popover-reference" ref="customPopoverReferenceRef">
       <slot name="reference"></slot>
       <div class="custom-popover-position" v-show="isShow">
         <div class="custom-popover-triangle"></div>
@@ -15,7 +11,9 @@
           <span>{{ props.title }}</span>
         </div>
         <div class="custom-popover-content">
-          <span>{{ props.content }}</span>
+          <slot name="content">
+            <div>{{ props.content }}</div>
+          </slot>
         </div>
       </div>
     </div>
@@ -29,16 +27,26 @@ defineOptions({
 });
 
 const props = defineProps({
+  // 弹出框的内容
   content: {
     type: Object as PropType<any>,
   },
+  // 弹出框的标题
   title: {
     type: Object as PropType<any>,
   },
+  // 弹出款的最小宽度
   minWidth: {
     type: Number,
     default: () => {
       return 100;
+    },
+  },
+  // 弹出框的触发方式
+  trigger: {
+    type: Object as PropType<"click" | "hover">,
+    default: () => {
+      return "click";
     },
   },
 });
@@ -61,6 +69,21 @@ onMounted(() => {
     } else {
       minWidth.value = customPopoverReferenceRef.value.clientWidth + "px";
     }
+
+    if (props.trigger === "click") {
+      customPopoverReferenceRef.value.addEventListener("click", showChange);
+    }
+
+    if (props.trigger === "hover") {
+      customPopoverReferenceRef.value.addEventListener(
+        "mouseenter",
+        showChange
+      );
+      customPopoverReferenceRef.value.addEventListener(
+        "mouseleave",
+        showChange
+      );
+    }
   }
 });
 </script>
@@ -82,7 +105,7 @@ float脱离文档流：使用float脱离文档流时，其他盒子会无视这�
     position: absolute;
     min-height: 10px;
     left: 50%;
-    width: var(--custom-popover-reference-width--);
+    min-width: var(--custom-popover-reference-width--);
     transform: translate(-50%, 10px);
     border: 1px solid #ccc;
     border-radius: 5px;
