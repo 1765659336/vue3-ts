@@ -318,4 +318,13 @@ export const pages: PageTable = [
     pageId: 5020,
     level: 2,
   },
+  {
+    component: "CustomDropdown",
+    mateId: 35,
+    name: "CustomDropdown",
+    parentPageId: 5,
+    path: "/CustomDropdown",
+    pageId: 5021,
+    level: 2,
+  },
 ];

@@ -84,6 +84,9 @@ const CustomBackTop = () =>
 // 自定义气泡卡片组件测试页面
 const CustomPopover = () =>
   import("src/views/ComponentsTest/CustomPopover/index.vue");
+// 自定义下拉菜单组件测试页面
+const CustomDropdown = () =>
+  import("src/views/ComponentsTest/CustomDropdown/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -142,6 +145,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomCollapse" },
   { path: "/CustomBackTop" },
   { path: "/CustomPopover" },
+  { path: "/CustomDropdown" },
 ];
 
 // 远程可配置页面
@@ -185,4 +189,5 @@ export const components: {
   CustomCollapse,
   CustomBackTop,
   CustomPopover,
+  CustomDropdown,
 };

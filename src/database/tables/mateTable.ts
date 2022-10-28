@@ -46,4 +46,5 @@ export const mates: MateTable = [
   { mateId: 32, icon: "", title: "自定义CustomCollapse折叠面板组件测试" },
   { mateId: 33, icon: "", title: "自定义CustomBackTop回到顶部组件测试" },
   { mateId: 34, icon: "", title: "自定义CustomPopover气泡卡片组件测试" },
+  { mateId: 35, icon: "", title: "自定义CustomDropdown下拉菜单组件测试" },
 ];
