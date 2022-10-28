@@ -309,4 +309,13 @@ export const pages: PageTable = [
     pageId: 5019,
     level: 2,
   },
+  {
+    component: "CustomPopover",
+    mateId: 34,
+    name: "CustomPopover",
+    parentPageId: 5,
+    path: "/CustomPopover",
+    pageId: 5020,
+    level: 2,
+  },
 ];

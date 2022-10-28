@@ -81,6 +81,9 @@ const CustomCollapse = () =>
 // 自定义回到顶部组件测试页面
 const CustomBackTop = () =>
   import("src/views/ComponentsTest/CustomBackTop/index.vue");
+// 自定义气泡卡片组件测试页面
+const CustomPopover = () =>
+  import("src/views/ComponentsTest/CustomPopover/index.vue");
 // 基础路由
 export const routes = [
   {
@@ -138,6 +141,7 @@ export const permissionsPages: Array<{ path: string }> = [
   { path: "/CustomAffix" },
   { path: "/CustomCollapse" },
   { path: "/CustomBackTop" },
+  { path: "/CustomPopover" },
 ];
 
 // 远程可配置页面
@@ -180,4 +184,5 @@ export const components: {
   CustomAffix,
   CustomCollapse,
   CustomBackTop,
+  CustomPopover,
 };
