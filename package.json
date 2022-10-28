@@ -7,7 +7,10 @@
         "dev": "cross-env NODE_ENV=development vite",
         "build": "vue-tsc --noEmit && vite build",
         "build:test": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:serve": "vitepress serve docs"
     },
     "dependencies": {
         "@jsdawn/vue3-tinymce": "^1.1.7",
@@ -31,6 +34,7 @@
         "unplugin-vue-define-options": "^0.12.2",
         "vite": "^3.0.7",
         "vite-plugin-mock": "^2.9.6",
-        "vue-tsc": "^0.39.5"
+        "vue-tsc": "^0.39.5",
+        "vitepress": "^1.0.0-alpha.15"
     }
 }
