@@ -49,6 +49,9 @@ import { useModalManageStore } from "src/store";
 import useInit from "./hooks/useInit";
 import { propData, emitData } from "./index";
 import useDrag from "src/hooks/useDrag";
+defineOptions({
+  name: "/CustomModal",
+});
 
 // 获取模态内容实例
 const modalContentRef: Ref<HTMLElement | null> = ref(null);

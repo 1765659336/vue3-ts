@@ -8,6 +8,9 @@
 
 <script setup lang="ts">
 import useBtnPermissions from "src/hooks/useBtnPermissions";
+defineOptions({
+  name: "/Home",
+});
 const { btnArray } = useBtnPermissions();
 </script>
 

@@ -15,6 +15,9 @@
 <script setup lang="ts">
 import { onMounted, PropType, ref } from "vue";
 import useBrush from "./hooks/useBrush";
+defineOptions({
+  name: "/CustomSignature",
+});
 const props = defineProps({
   // 画笔的宽度
   lineWidth: {

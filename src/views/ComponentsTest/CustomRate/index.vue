@@ -17,6 +17,9 @@
 import { ElRate } from "element-plus";
 import CustomRate from "src/components/CustomComponents/CustomRate/index.vue";
 import { ref } from "vue";
+defineOptions({
+  name: "CustomRateTest",
+});
 const value = ref(0);
 const value2 = ref(1);
 const value3 = ref(2);

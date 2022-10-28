@@ -5,7 +5,7 @@
   <el-button type="primary" @click="isShowFunModalError"
     >打开ModalError弹窗</el-button
   >
-  {{modalVisibleDivOne}}
+  {{ modalVisibleDivOne }}
   <DivOne
     v-if="modalVisibleDivOne"
     :modalVisible="modalVisibleDivOne"
@@ -27,6 +27,9 @@
 <script setup lang="ts">
 import useBtnPermissions from "src/hooks/useBtnPermissions";
 import useGetModal from "src/hooks/useGetModal";
+defineOptions({
+  name: "/ModalTest",
+});
 const {
   AsyncComp: DivOne,
   isShowFun: isShowFunDivOne,

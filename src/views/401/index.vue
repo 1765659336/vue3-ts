@@ -5,6 +5,10 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineOptions({
+  name: "/401",
+});
+</script>
 
 <style scoped></style>

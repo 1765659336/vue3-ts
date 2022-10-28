@@ -31,6 +31,9 @@
 import { useMenuStore } from "src/store";
 import getMenuTree from "src/hooks/useGetMenuTree";
 import router from "src/router";
+defineOptions({
+  name: "/CustomMenu",
+});
 // 菜单仓库
 const menuStore = useMenuStore();
 // 获取菜单树形结构hooks

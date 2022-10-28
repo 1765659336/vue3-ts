@@ -14,7 +14,11 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineOptions({
+  name: "/InstructionsRealImg",
+});
+</script>
 
 <style scoped lang="less">
 img {

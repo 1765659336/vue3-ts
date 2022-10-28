@@ -14,6 +14,9 @@
 
 <script setup lang="ts">
 import { PropType } from "vue";
+defineOptions({
+  name: "/CustomTimeline",
+});
 const props = defineProps({
   timeValue: {
     type: String,

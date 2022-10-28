@@ -22,6 +22,9 @@
 
 <script setup lang="ts">
 import operationModal from "./hooks/useOperationModal";
+defineOptions({
+  name: "/ModalManage",
+});
 const { modalArr, modalManageStore } = operationModal();
 </script>
 

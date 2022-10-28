@@ -6,6 +6,9 @@
 <script setup lang="ts">
 import CustomSwitch from "src/components/CustomComponents/CustomSwitch/index.vue";
 import { ref } from "vue";
+defineOptions({
+  name: "CustomSwitchTest",
+});
 const value = ref(false);
 </script>
 

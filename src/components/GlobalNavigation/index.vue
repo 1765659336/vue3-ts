@@ -16,6 +16,10 @@ import { onMounted, Ref, ref } from "vue";
 import ModalManage from "src/components/ModalManage/index.vue";
 import { Briefcase } from "@element-plus/icons-vue";
 import useContentSwitch from "src/components/GlobalNavigation/hooks/useContentSwitch";
+defineOptions({
+  name: "/CustomNavigation",
+});
+
 const GlobalNavigationRef: Ref<HTMLElement | undefined> = ref();
 onMounted(() => {
   if (GlobalNavigationRef.value) {

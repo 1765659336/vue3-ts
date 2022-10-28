@@ -44,7 +44,9 @@ import { ElMessageBox } from "element-plus";
 import { GetRoles, DeleteRole, postRole, putRole } from "src/api/permissions";
 import { IRoleTableItem, RoleTable } from "src/constraint/tablesCommon";
 import { reactive, ref } from "vue";
-
+defineOptions({
+  name: "/RoleManagement",
+});
 const tableData = reactive<RoleTable>([]);
 
 const updateRow = (scope: { $index: number; row: IRoleTableItem }) => {

@@ -13,6 +13,9 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+defineOptions({
+  name: "/CustomSwitch",
+});
 
 const props = defineProps({
   modelValue: {

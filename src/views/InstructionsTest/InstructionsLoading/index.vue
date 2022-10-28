@@ -8,6 +8,9 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+defineOptions({
+  name: "/InstructionsLoading",
+});
 const flag = ref(false);
 </script>
 

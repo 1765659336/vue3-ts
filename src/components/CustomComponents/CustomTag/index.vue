@@ -7,6 +7,9 @@
 
 <script setup lang="ts">
 import { computed, PropType } from "vue";
+defineOptions({
+  name: "/CustomTag",
+});
 
 const props = defineProps({
   modelValue: {

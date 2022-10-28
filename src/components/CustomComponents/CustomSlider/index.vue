@@ -20,6 +20,9 @@
 import { defineProps, PropType, ref, watch } from "vue";
 import { ElInputNumber } from "element-plus";
 import useMain from "./hooks/main";
+defineOptions({
+  name: "/CustomSlider",
+});
 
 // 滑动按钮的实例
 const knob = ref();

@@ -11,6 +11,9 @@
 import { reactive, ref } from "vue";
 // 引入组件 npm i @/jsdawn/vue3-tinymce
 import Vue3Tinymce from "@jsdawn/vue3-tinymce";
+defineOptions({
+  name: "/RtEdit",
+});
 
 // 图片上传回调函数
 const uploadImage = function (res) {

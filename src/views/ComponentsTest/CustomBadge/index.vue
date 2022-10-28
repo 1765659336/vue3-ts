@@ -33,7 +33,7 @@
 import CustomBadge from "src/components/CustomComponents/CustomBadge/index.vue";
 import CustomTag from "src/components/CustomComponents/CustomTag/index.vue";
 defineOptions({
-  name: "CustomBadge",
+  name: "CustomBadgeTest",
 });
 </script>
 
