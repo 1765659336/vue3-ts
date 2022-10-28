@@ -11,14 +11,18 @@ export default function (props: any, emits: any) {
   const mouseEnter = function (index: number) {
     if (!isClickLock.value) {
       for (let i = 0; i <= index; i++) {
-        classArr[i]["be-select"] = true;
+        if (classArr[i]) {
+          classArr[i]["be-select"] = true;
+        }
       }
     }
   };
 
   const mouseLeave = function (index: number) {
     if (!isClickLock.value) {
-      classArr[index]["be-select"] = false;
+      if (classArr[index]) {
+        classArr[index]["be-select"] = false;
+      }
     }
   };
 
@@ -26,7 +30,9 @@ export default function (props: any, emits: any) {
     isClickLock.value = true;
     if (props.rateItemNumber) {
       for (let i = 0; i < props.rateItemNumber; i++) {
-        classArr[i]["be-select"] = i <= index;
+        if (classArr[i]) {
+          classArr[i]["be-select"] = i <= index;
+        }
       }
       emits("update:rateValue", index + 1);
     }
@@ -35,10 +41,12 @@ export default function (props: any, emits: any) {
   const containerMouseLeave = function () {
     if (!isClickLock.value) {
       for (let i = 0; i <= props.rateItemNumber; i++) {
-        if (i >= props.rateValue) {
-          classArr[i]["be-select"] = false;
-        }else {
-          classArr[i]["be-select"] = true;
+        if (classArr[i]) {
+          if (i >= props.rateValue) {
+            classArr[i]["be-select"] = false;
+          } else {
+            classArr[i]["be-select"] = true;
+          }
         }
       }
     }
