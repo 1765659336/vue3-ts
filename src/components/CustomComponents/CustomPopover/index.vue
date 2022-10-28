@@ -82,6 +82,10 @@ onMounted(() => {
     }
   }
 });
+
+defineExpose({
+  showChange,
+});
 </script>
 
 <style scoped lang="less">
