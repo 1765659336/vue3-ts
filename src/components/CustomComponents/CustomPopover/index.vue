@@ -4,10 +4,10 @@
     :style="{ '--custom-popover-reference-width--': minWidth }"
   >
     <div class="custom-popover-reference" ref="customPopoverReferenceRef">
-      <slot name="reference"></slot>
+      <div ref="referenceRef"><slot name="reference"></slot></div>
       <div class="custom-popover-position" v-show="isShow">
         <div class="custom-popover-triangle"></div>
-        <div class="custom-popover-title">
+        <div class="custom-popover-title" v-if="props.title">
           <span>{{ props.title }}</span>
         </div>
         <div class="custom-popover-content">
@@ -52,6 +52,8 @@ const props = defineProps({
 });
 
 const customPopoverReferenceRef = ref();
+
+const referenceRef = ref();
 const isShow = ref(false);
 
 const showChange = function () {
@@ -71,18 +73,12 @@ onMounted(() => {
     }
 
     if (props.trigger === "click") {
-      customPopoverReferenceRef.value.addEventListener("click", showChange);
+      referenceRef.value.addEventListener("click", showChange);
     }
 
     if (props.trigger === "hover") {
-      customPopoverReferenceRef.value.addEventListener(
-        "mouseenter",
-        showChange
-      );
-      customPopoverReferenceRef.value.addEventListener(
-        "mouseleave",
-        showChange
-      );
+      referenceRef.value.addEventListener("mouseenter", showChange);
+      referenceRef.value.addEventListener("mouseleave", showChange);
     }
   }
 });
