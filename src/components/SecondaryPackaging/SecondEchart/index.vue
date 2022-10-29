@@ -9,9 +9,9 @@
 import { PropType, ref } from "vue";
 import * as echart from "echarts";
 import useMain from "./hooks/useMain";
-defineOptions({
-  name: "/SecondRchart",
-});
+// defineOptions({
+//   name: "/SecondEchart",
+// });
 const Echarts = ref();
 const props = defineProps({
   width: {
