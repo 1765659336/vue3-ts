@@ -1,7 +1,3 @@
-## 基本使用
-
-::: details 点我查看代码
-```vue
 <template>
   <div class="div">
     <CustomBackTop></CustomBackTop>
@@ -48,17 +44,3 @@ import CustomBackTop from "../../../../src/components/CustomComponents/CustomBac
   background-color: green;
 }
 </style>
-
-```
-:::
-
-<CustomBackTopTest></CustomBackTopTest>
-
-
-## props属性
-| 参数   | 参数说明        | 数据类型 | 可选值        | 默认值 |
-| ------ | --------------- | -------- | ------------- | ------ |
-| bottom  | 固定在bottom多少距离            | Number   | 单位（px） | 0   |
-| right | 固定在right多少距离            | Number   | 单位（px） | 0   |
-| hiddenValue | 滚动距离少于多少时，隐藏            | Number   | 单位（px） | 0   |
-| animationTime | 动画步长            | Number   | 单位（mm） | 5  |

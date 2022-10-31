@@ -12,9 +12,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "@vue/runtime-core";
 
-defineOptions({
-  name: "CustomBackTop",
-});
+// defineOptions({
+//   name: "CustomBackTop",
+// });
 const props = defineProps({
   right: {
     type: Number,
@@ -72,6 +72,7 @@ onMounted(() => {
     isShow.value = false;
   }
   window.addEventListener("scroll", () => {
+    // 再次滚动时，移除上一次的动画
     const scrollY =
       document.documentElement.scrollTop || document.body.scrollTop;
     console.log(scrollY, props.hiddenValue);
