@@ -16,9 +16,9 @@ left优先级比right高
  */
 import { onMounted, PropType, reactive, Ref, ref } from "vue";
 
-defineOptions({
-  name: "/CustomAffix",
-});
+// defineOptions({
+//   name: "/CustomAffix",
+// });
 
 const props = defineProps({
   target: {

@@ -28,7 +28,9 @@ const props = defineProps({
   },
   option: {
     type: Object as PropType<any>,
-    default: () => {},
+    default: () => {
+      return {};
+    },
   },
 });
 useMain(echart, Echarts, props);

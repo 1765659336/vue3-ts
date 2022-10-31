@@ -33,7 +33,6 @@ export default {
                     text: 'Custom自定义',
                     items: [
                         { text: 'Affix固钉', link: '/Custom/Affix' },
-                        { text: 'Aside布局-侧边', link: '/Custom/Aside' },
                         { text: 'BackTop回到顶部', link: '/Custom/BackTop' },
                         { text: 'Badge徽章', link: '/Custom/Badge' },
                         { text: 'Button按钮', link: '/Custom/Button' },
@@ -43,10 +42,7 @@ export default {
                         { text: 'CollapseItem折叠面板子元素', link: '/Custom/CollapseItem' },
                         { text: 'Dropdown下拉菜单', link: '/Custom/Dropdown' },
                         { text: 'DropdownItem下拉菜单子元素', link: '/Custom/DropdownItem' },
-                        { text: 'Footer布局-底部', link: '/Custom/Footer' },
-                        { text: 'Header布局-头部', link: '/Custom/Header' },
                         { text: 'Link文字链接', link: '/Custom/Link' },
-                        { text: 'Main布局-主体', link: '/Custom/Main' },
                         { text: 'Message消息提示框', link: '/Custom/Message' },
                         { text: 'Popover气泡弹出框', link: '/Custom/Popover' },
                         { text: 'Rate评分', link: '/Custom/Rate' },
