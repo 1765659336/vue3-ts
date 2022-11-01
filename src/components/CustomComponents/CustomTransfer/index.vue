@@ -34,10 +34,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType, reactive, toRef } from "vue";
-import CustomButton from "src/components/CustomComponents/CustomButton/index.vue";
+import { PropType, reactive } from "vue";
 import { dataItem } from "./index";
-import CustomCheckbox from "src/components/CustomComponents/CustomCheckbox/index.vue";
 import useInit from "./hooks/useInit";
 import useOperation from "./hooks/useOperation";
 import useWatch from "./hooks/useWatch";

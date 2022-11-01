@@ -5,14 +5,14 @@
     @click="handleClick"
     :autofocus="autofocus"
     v-loading="props.loading"
-  >
+    >
     <!-- 当默认插槽传递了内容时，再渲染span标签。否则就不渲染 -->
     <span v-if="currentInstance?.slots.default"><slot></slot></span>
   </button>
 </template>
 
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, PropType, reactive } from "vue";
+import { getCurrentInstance, PropType, reactive } from "vue";
 
 // defineOptions({
 //   name: "CustomButton",

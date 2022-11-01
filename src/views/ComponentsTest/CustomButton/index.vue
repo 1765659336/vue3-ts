@@ -31,7 +31,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomButton from "src/components/CustomComponents/CustomButton/index.vue";
 // defineOptions({
 //   name: "CustomButtonTest",
 // });

@@ -18,10 +18,29 @@ import "element-plus/dist/index.css";
 import { createPinia, Pinia } from "pinia";
 
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+import customComponents from "src/components/CustomComponents/index";
+import secondaryPackaging from "src/components/SecondaryPackaging/index";
 import piniaPlugin from "src/store/storeplugin";
 
-// 全局导入所有的element-plus icon
 const app = createApp(App);
+
+// 全局注册Custom组件
+for (const key in customComponents) {
+  if (Object.prototype.hasOwnProperty.call(customComponents, key)) {
+    const element = customComponents[key];
+    app.component(key, element);
+  }
+}
+
+// 全局注册二次封装组件
+for (const key in secondaryPackaging) {
+  if (Object.prototype.hasOwnProperty.call(secondaryPackaging, key)) {
+    const element = secondaryPackaging[key];
+    app.component(key, element);
+  }
+}
+
+// 全局导入所有的element-plus icon
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
@@ -47,7 +66,7 @@ pinia.use(
 SetCustomMessageManageConfig(5000, false);
 
 // 全局注册自定义指令
-import Directives from 'src/v_instructions'
+import Directives from "src/v_instructions";
 
 // 注册
 app.use(route).use(pinia).use(ElementPlus).use(Directives).mount("#app");

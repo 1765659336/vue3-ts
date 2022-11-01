@@ -9,8 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomCollapse from "src/components/CustomComponents/CustomCollapse/index.vue";
-import CustomCollapseItem from "src/components/CustomComponents/CustomCollapseItem/index.vue";
 // defineOptions({
 //   name: "CustomCollapseTest",
 // });

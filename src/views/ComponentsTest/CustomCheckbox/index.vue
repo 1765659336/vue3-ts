@@ -9,8 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomCheckbox from "src/components/CustomComponents/CustomCheckbox/index.vue";
-import CustomButtom from "src/components/CustomComponents/CustomButton/index.vue";
 import { ref } from "vue";
 // defineOptions({
 //   name: "CustomCheckboxTest",

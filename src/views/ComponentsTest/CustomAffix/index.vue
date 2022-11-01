@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomAffix from "src/components/CustomComponents/CustomAffix/index.vue";
 import { ref } from "vue";
 // defineOptions({
 //   name: "/CustomAffixTest",

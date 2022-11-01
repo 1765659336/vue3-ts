@@ -9,11 +9,7 @@
   </CustomCantainer>
 </template>
 
-<script setup lang="ts">
-import CustomCantainer from "../../../../src/components/CustomComponents/CustomCantainer/index.vue";
-import CustomAside from "../../../../src/components/CustomComponents/CustomAside/index.vue";
-import CustomMain from "../../../../src/components/CustomComponents/CustomMain/index.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="less"></style>
 
@@ -35,13 +31,7 @@ import CustomMain from "../../../../src/components/CustomComponents/CustomMain/i
     </CustomCantainer>
   </template>
   
-<script setup lang="ts">
-import CustomCantainer from "../../../../src/components/CustomComponents/CustomCantainer/index.vue";
-import CustomHeader from "../../../../src/components/CustomComponents/CustomHeader/index.vue";
-import CustomFooter from "../../../../src/components/CustomComponents/CustomFooter/index.vue";
-import CustomAside from "../../../../src/components/CustomComponents/CustomAside/index.vue";
-import CustomMain from "../../../../src/components/CustomComponents/CustomMain/index.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="less"></style>
 ```
@@ -52,34 +42,34 @@ import CustomMain from "../../../../src/components/CustomComponents/CustomMain/i
 ## CustomCantainer
 ## slot插槽
 
-| 插槽名 | 说明                 | 默认值 |
-| ------ | -------------------- | ------ |
+| 插槽名 | 说明                                                                       | 默认值 |
+| ------ | -------------------------------------------------------------------------- | ------ |
 | -      | 默认插槽，里面只能传入CustomHeader,CustomAside,CustomMain,CustomFooter组件 | 无     |
 
 ## CustomHeader
 ## slot插槽
 
-| 插槽名 | 说明                 | 默认值 |
-| ------ | -------------------- | ------ |
+| 插槽名 | 说明                                                                       | 默认值 |
+| ------ | -------------------------------------------------------------------------- | ------ |
 | -      | 默认插槽，里面只能传入CustomHeader,CustomAside,CustomMain,CustomFooter组件 | 无     |
 
 ## CustomAside
 ## slot插槽
 
-| 插槽名 | 说明                 | 默认值 |
-| ------ | -------------------- | ------ |
+| 插槽名 | 说明                                                                        | 默认值 |
+| ------ | --------------------------------------------------------------------------- | ------ |
 | -      | 默认插槽，里面只能传入CustomHeader,CustomAside,CustomMain，CustomFooter组件 | 无     |
 
 ## CustomMain
 ## slot插槽
 
-| 插槽名 | 说明                 | 默认值 |
-| ------ | -------------------- | ------ |
+| 插槽名 | 说明                                                                       | 默认值 |
+| ------ | -------------------------------------------------------------------------- | ------ |
 | -      | 默认插槽，里面只能传入CustomHeader,CustomAside,CustomMain,CustomFooter组件 | 无     |
 
 ## CustomFooter
 ## slot插槽
 
-| 插槽名 | 说明                 | 默认值 |
-| ------ | -------------------- | ------ |
+| 插槽名 | 说明                                                                       | 默认值 |
+| ------ | -------------------------------------------------------------------------- | ------ |
 | -      | 默认插槽，里面只能传入CustomHeader,CustomAside,CustomMain,CustomFooter组件 | 无     |

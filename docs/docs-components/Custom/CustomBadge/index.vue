@@ -25,8 +25,8 @@
     }"
     ><CustomTag>自定义字体颜色和背景色</CustomTag></CustomBadge
   >
-  <br>
-  <br>
+  <br />
+  <br />
   <CustomBadge>
     <template #dot>
       <div>dot插槽</div>
@@ -35,13 +35,7 @@
   </CustomBadge>
 </template>
 
-<script setup lang="ts">
-import CustomBadge from "../../../../src/components/CustomComponents/CustomBadge/index.vue";
-import CustomTag from "../../../../src/components/CustomComponents/CustomTag/index.vue";
-//   defineOptions({
-//     name: "CustomBadgeTest",
-//   });
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="less">
 .div {

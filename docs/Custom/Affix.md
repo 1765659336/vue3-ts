@@ -14,12 +14,7 @@ top和bottom同时传入，top的优先级比bottom高，同理left比right高
     </div>
 </template>
 
-<script setup lang="ts">
-import CustomAffix from "../../../../src/components/CustomComponents/CustomAffix/index.vue";
-//   defineOptions({
-//     name: "/CustomAffixTest",
-//   });
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="less">
 .container {

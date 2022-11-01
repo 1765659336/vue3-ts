@@ -2,13 +2,13 @@
   <CustomLink
     @clickCallback="clickFun"
     url="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"
-    >文件描述当前窗口跳转</CustomLink
+    >文字描述当前窗口跳转</CustomLink
   >
   <CustomLink
     mainColor="green"
     target="_blank"
     url="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"
-    >文件描述小窗口打开</CustomLink
+    >文字描述小窗口打开</CustomLink
   >
   <CustomLink mainColor="#fc5531" :disabled="disabled">禁止点击</CustomLink>
   <CustomLink mainColor="rgba(67, 173, 127, .5)" v-model:disabled="disabled"
@@ -23,7 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomLink from "src/components/CustomComponents/CustomLink/index.vue";
 import { ref } from "vue";
 // defineOptions({
 //   name: "CustomLinkTest",

@@ -15,7 +15,6 @@
 
 <script setup lang="ts">
 import { ElRate } from "element-plus";
-import CustomRate from "src/components/CustomComponents/CustomRate/index.vue";
 import { ref } from "vue";
 // defineOptions({
 //   name: "CustomRateTest",

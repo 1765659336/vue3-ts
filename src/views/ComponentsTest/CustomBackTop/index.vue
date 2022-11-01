@@ -14,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomBackTop from "src/components/CustomComponents/CustomBackTop/index.vue";
 // defineOptions({
 //   name: "CustomBackTopTest",
 // });

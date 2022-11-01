@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomSignature from "src/components/CustomComponents/CustomSignature/index.vue";
 // defineOptions({
 //   name: "CustomSignatureTest",
 // });

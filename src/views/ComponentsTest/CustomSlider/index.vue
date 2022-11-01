@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomSlider from "src/components/CustomComponents/CustomSlider/index.vue";
 import { Ref, ref } from "vue";
 // defineOptions({
 //   name: "CustomSliderTest",

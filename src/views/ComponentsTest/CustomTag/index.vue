@@ -14,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomTag from "src/components/CustomComponents/CustomTag/index.vue";
 import { ref } from "vue";
 // defineOptions({
 //   name: "CustomTagTest",

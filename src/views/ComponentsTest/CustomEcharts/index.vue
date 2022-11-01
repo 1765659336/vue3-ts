@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import SecondEchart from "src/components/SecondaryPackaging/SecondEchart/index.vue";
 import { reactive } from "vue";
 // defineOptions({
 //   name: "CustomEchartsTest",

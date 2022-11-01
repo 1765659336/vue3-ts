@@ -1,5 +1,5 @@
 export default {
-    title: '文档',
+    title: '胖子Fatty',
     description: '',
     lastUpdated: true,
     markdown: {
@@ -11,17 +11,18 @@ export default {
         logo: '/logo.ico',
         lastUpdatedText: "最后更新时间",
         nav: [
-            { text: '首页', link: '/' },
+            { text: '首页Home', link: '/' },
             {
-                text: '文档', items: [
+                text: '文档Document', items: [
                     { text: '玩具组件Custom', link: '/Custom/index' },
                     { text: '业务组件SecondaryPackaging', link: '/SecondaryPackaging/index' },
-                    { text: '动画', link: '/Animation/index' },
+                    { text: '自定义指令VInstructions', link: '/VInstructions/index' },
+                    { text: '动画Animation', link: '/Animation/index' },
                 ]
             },
-            { text: '团队', link: '/Team/index' },
+            { text: '团队Team', link: '/Team/index' },
             {
-                text: '讨论',
+                text: '讨论Discuss',
                 items: [
                     { text: 'QQ群', link: 'https://jq.qq.com/?_wv=1027&k=Zhdmd0xz' },
                 ]
@@ -67,6 +68,13 @@ export default {
                 }
             ],
             '/Animation/': [
+                {
+                    text: '无',
+                    items: [
+                    ]
+                }
+            ],
+            '/VInstructions/': [
                 {
                     text: '无',
                     items: [

@@ -31,7 +31,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomTimeLine from "src/components/CustomComponents/CustomTimeLine/index.vue";
 // defineOptions({
 //   name: "CustomTimelineTest",
 // });

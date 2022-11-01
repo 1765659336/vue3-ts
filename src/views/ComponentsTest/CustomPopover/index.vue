@@ -36,7 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import CustomPopover from "src/components/CustomComponents/CustomPopover/index.vue";
 // defineOptions({
 //   name: "CustomPopoverTest",
 // });
