@@ -11,9 +11,9 @@
 <script setup lang="ts">
 import { onMounted, PropType, ref } from "vue";
 
-defineOptions({
-  name: "CustomCantainer",
-});
+// defineOptions({
+//   name: "CustomCantainer",
+// });
 
 const props = defineProps({
   flexDirection: {
@@ -29,7 +29,11 @@ const flexDirection = ref(props.flexDirection);
 const containerRef = ref();
 onMounted(() => {
   for (let obj of containerRef.value.__vnode.children[0].children) {
-    if (obj.type.name == "CustomHeader" || obj.type.name == "CustomFooter") {
+    // 使用obj.type.name来判断是否有CustomHeader或CustomFooter组件来改为垂直布局，当不使用defineOption时，组件的名称默认为文件名即index
+    if (
+      obj.el.className == "custom-header-container" ||
+      obj.type.name == "custom-footer-container"
+    ) {
       flexDirection.value = "wrap";
     }
   }
