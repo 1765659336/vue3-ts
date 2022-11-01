@@ -16,9 +16,9 @@ import { PropType } from "vue";
 import useDotValue from "./hooks/useDotValue";
 import useStyle from "./hooks/useStyle";
 
-defineOptions({
-  name: "CustomBadge",
-});
+// defineOptions({
+//   name: "CustomBadge",
+// });
 
 const props = defineProps({
   modelValue: {

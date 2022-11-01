@@ -15,9 +15,9 @@
 
 <script setup lang="ts">
 import CustomBackTop from "src/components/CustomComponents/CustomBackTop/index.vue";
-defineOptions({
-  name: "CustomBackTopTest",
-});
+// defineOptions({
+//   name: "CustomBackTopTest",
+// });
 </script>
 
 <style scoped lang="less">

@@ -10,9 +10,9 @@
 
 <script setup lang="ts" name="Index">
 import Menu from "src/components/Menu/index.vue";
-defineOptions({
-  name: "/Index",
-});
+// defineOptions({
+//   name: "/Index",
+// });
 </script>
 
 <style scoped lang="less">

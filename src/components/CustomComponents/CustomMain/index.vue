@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "CustomMain",
-});
+// defineOptions({
+//   name: "CustomMain",
+// });
 </script>
 
 <style scoped lang="less">

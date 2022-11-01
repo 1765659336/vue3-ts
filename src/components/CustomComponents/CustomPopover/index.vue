@@ -22,9 +22,9 @@
 
 <script setup lang="ts">
 import { onMounted, PropType, Ref, ref } from "vue";
-defineOptions({
-  name: "CustomPopover",
-});
+// defineOptions({
+//   name: "CustomPopover",
+// });
 
 const props = defineProps({
   // 弹出框的内容

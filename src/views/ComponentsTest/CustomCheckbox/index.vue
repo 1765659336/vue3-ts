@@ -12,9 +12,9 @@
 import CustomCheckbox from "src/components/CustomComponents/CustomCheckbox/index.vue";
 import CustomButtom from "src/components/CustomComponents/CustomButton/index.vue";
 import { ref } from "vue";
-defineOptions({
-  name: "CustomCheckboxTest",
-});
+// defineOptions({
+//   name: "CustomCheckboxTest",
+// });
 
 const isCheckout = ref(true);
 const btn = function () {

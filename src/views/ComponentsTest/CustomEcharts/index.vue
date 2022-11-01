@@ -5,9 +5,9 @@
 <script setup lang="ts">
 import SecondEchart from "src/components/SecondaryPackaging/SecondEchart/index.vue";
 import { reactive } from "vue";
-defineOptions({
-  name: "CustomEchartsTest",
-});
+// defineOptions({
+//   name: "CustomEchartsTest",
+// });
 const option = reactive({
   xAxis: {
     type: "category",

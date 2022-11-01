@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "/CheckResume",
-});
+// defineOptions({
+//   name: "/CheckResume",
+// });
 </script>
 
 <style scoped lang="less">

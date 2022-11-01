@@ -11,9 +11,9 @@
 <script setup lang="ts">
 import CustomCollapse from "src/components/CustomComponents/CustomCollapse/index.vue";
 import CustomCollapseItem from "src/components/CustomComponents/CustomCollapseItem/index.vue";
-defineOptions({
-  name: "CustomCollapseTest",
-});
+// defineOptions({
+//   name: "CustomCollapseTest",
+// });
 
 const fn = function (e: MouseEvent, lock: any) {
   console.log("容器", e, lock);

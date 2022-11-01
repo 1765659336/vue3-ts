@@ -15,9 +15,9 @@
 import CustomPopover from "src/components/CustomComponents/CustomPopover/index.vue";
 import { ref } from "vue";
 
-defineOptions({
-  name: "CustomDropdown",
-});
+// defineOptions({
+//   name: "CustomDropdown",
+// });
 
 const emits = defineEmits(["command"]);
 

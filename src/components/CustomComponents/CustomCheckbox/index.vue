@@ -16,9 +16,10 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 
-defineOptions({
-  name: "CustomCheckbox",
-});
+// defineOptions({
+//   name: "CustomCheckbox",
+// });
+
 const props = defineProps({
   modelValue: {
     type: Boolean,

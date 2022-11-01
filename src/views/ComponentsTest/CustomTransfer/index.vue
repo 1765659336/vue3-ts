@@ -5,9 +5,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import CustomTransfer from "src/components/CustomComponents/CustomTransfer/index.vue";
-defineOptions({
-  name: "CustomTransferTest",
-});
+// defineOptions({
+//   name: "CustomTransferTest",
+// });
 
 interface Option {
   key: number;

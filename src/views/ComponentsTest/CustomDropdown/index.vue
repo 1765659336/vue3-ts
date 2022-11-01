@@ -14,9 +14,9 @@
 <script setup lang="ts">
 import CustomDropdown from "src/components/CustomComponents/CustomDropdown/index.vue";
 import CustomDropdownItem from "src/components/CustomComponents/CustomDropdownItem/index.vue";
-defineOptions({
-  name: "CustomDropdownTest",
-});
+// defineOptions({
+//   name: "CustomDropdownTest",
+// });
 
 const click = function (command: any) {
   console.log(command);

@@ -27,9 +27,9 @@
 <script setup lang="ts">
 import useBtnPermissions from "src/hooks/useBtnPermissions";
 import useGetModal from "src/hooks/useGetModal";
-defineOptions({
-  name: "/ModalTest",
-});
+// defineOptions({
+//   name: "/ModalTest",
+// });
 const {
   AsyncComp: DivOne,
   isShowFun: isShowFunDivOne,

@@ -24,9 +24,9 @@
 <script setup lang="ts">
 import { ElMessage, FormInstance, FormRules } from "element-plus";
 import { reactive, Ref, ref } from "vue";
-defineOptions({
-  name: "/ModalConfig",
-});
+// defineOptions({
+//   name: "/ModalConfig",
+// });
 const formRef: Ref<FormInstance | null> = ref(null);
 const formData = reactive<{
   modalWidth: string | number;

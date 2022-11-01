@@ -14,9 +14,9 @@ import {
 } from "@vue/runtime-core";
 import { VNode } from "vue";
 
-defineOptions({
-  name: "CustomCollapse",
-});
+// defineOptions({
+//   name: "CustomCollapse",
+// });
 
 const currentInstance: ComponentInternalInstance | null = getCurrentInstance();
 

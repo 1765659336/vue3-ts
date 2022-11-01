@@ -11,9 +11,9 @@
 
 <script setup lang="ts">
 import { useChangeConfig } from "./hooks/useChangeConfig";
-defineOptions({
-  name: "/StyleConfig",
-});
+// defineOptions({
+//   name: "/StyleConfig",
+// });
 const {
   mainColor,
   menuTriggerIconColor,

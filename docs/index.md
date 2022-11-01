@@ -5,7 +5,7 @@ title: VuePress
 titleTemplate: Vue3-Ts文档
 
 hero:
-  name: 金六谷文档
+  name: 文档
   text: 做着玩的一个项目
   tagline: ......
   image:

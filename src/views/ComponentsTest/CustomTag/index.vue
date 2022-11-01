@@ -16,9 +16,9 @@
 <script setup lang="ts">
 import CustomTag from "src/components/CustomComponents/CustomTag/index.vue";
 import { ref } from "vue";
-defineOptions({
-  name: "CustomTagTest",
-});
+// defineOptions({
+//   name: "CustomTagTest",
+// });
 const isShow = ref(true);
 const isCanClose = ref(true);
 const closeCallback = function (e: MouseEvent) {

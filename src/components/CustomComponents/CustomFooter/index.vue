@@ -8,9 +8,10 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "CustomFooter",
-});
+// defineOptions({
+//   name: "CustomFooter",
+// });
+
 const props = defineProps({
   height: {
     type: String,

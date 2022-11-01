@@ -6,9 +6,9 @@
 
 <script setup lang="ts">
 import UploadFile from 'src/components/UploadFile/index.vue'
-defineOptions({
-  name: "/UploadFileTest",
-});
+// defineOptions({
+//   name: "/UploadFileTest",
+// });
 </script>
 
 <style scoped lang="less">

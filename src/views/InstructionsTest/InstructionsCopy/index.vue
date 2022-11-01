@@ -7,9 +7,9 @@
 import { ref } from "vue";
 import { ElInput, ElButton } from "element-plus";
 import { CustomMessage } from "src/components/CustomComponents/CustomMessage/index";
-defineOptions({
-  name: "/InstructionsCopy",
-});
+// defineOptions({
+//   name: "/InstructionsCopy",
+// });
 const textareaValue = ref("");
 const copySuccess = function (value: any) {
   CustomMessage("info", "复制成功值为:" + value);

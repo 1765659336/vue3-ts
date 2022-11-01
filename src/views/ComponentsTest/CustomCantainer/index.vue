@@ -14,9 +14,9 @@ import CustomFooter from "src/components/CustomComponents/CustomFooter/index.vue
 import CustomAside from "src/components/CustomComponents/CustomAside/index.vue";
 import CustomMain from "src/components/CustomComponents/CustomMain/index.vue";
 
-defineOptions({
-  name: "CustomCantinerTest",
-});
+// defineOptions({
+//   name: "CustomCantinerTest",
+// });
 </script>
 
 <style scoped lang="less"></style>

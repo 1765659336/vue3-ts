@@ -38,3 +38,10 @@ import CustomAffix from "../../../../src/components/CustomComponents/CustomAffix
 | ------ | --------------- | -------- | ------------- | ------ |
 | top  | 固定在top多少距离            | Number   | 单位（px） | -   |
 | left | 固定在left多少距离            | Number   | 单位（px） | -   |
+
+## slot插槽
+
+| 插槽名 | 说明                 |
+| ------ | -------------------- |
+| -      | 默认插槽，固定的节点 |
+

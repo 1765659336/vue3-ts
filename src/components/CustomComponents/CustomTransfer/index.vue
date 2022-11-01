@@ -42,9 +42,9 @@ import useInit from "./hooks/useInit";
 import useOperation from "./hooks/useOperation";
 import useWatch from "./hooks/useWatch";
 
-defineOptions({
-  name: "CustomTransfer",
-});
+// defineOptions({
+//   name: "CustomTransfer",
+// });
 const props = defineProps({
   value: {
     type: Object,

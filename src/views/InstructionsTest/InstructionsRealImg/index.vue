@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "/InstructionsRealImg",
-});
+// defineOptions({
+//   name: "/InstructionsRealImg",
+// });
 </script>
 
 <style scoped lang="less">

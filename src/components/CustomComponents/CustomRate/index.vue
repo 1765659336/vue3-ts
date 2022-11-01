@@ -16,9 +16,9 @@
 <script setup lang="ts">
 import useInit from "./hooks/useInit";
 import useOperation from "./hooks/useOperation";
-defineOptions({
-  name: "/CustomRate",
-});
+// defineOptions({
+//   name: "/CustomRate",
+// });
 const props = defineProps({
   // 评分的值
   rateValue: {

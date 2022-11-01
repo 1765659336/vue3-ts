@@ -25,9 +25,9 @@ import { ref } from "vue";
 import { ElMessage } from "element-plus";
 import { Plus } from "@element-plus/icons-vue";
 import type { UploadProps } from "element-plus";
-defineOptions({
-  name: "/UploadFile",
-});
+// defineOptions({
+//   name: "/UploadFile",
+// });
 const imageUrl = ref("");
 
 const handleAvatarSuccess: UploadProps["onSuccess"] = (

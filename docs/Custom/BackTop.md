@@ -62,3 +62,10 @@ import CustomBackTop from "../../../../src/components/CustomComponents/CustomBac
 | right | 固定在right多少距离            | Number   | 单位（px） | 0   |
 | hiddenValue | 滚动距离少于多少时，隐藏            | Number   | 单位（px） | 0   |
 | animationTime | 动画步长            | Number   | 单位（mm） | 5  |
+
+## 插槽
+
+| 插槽名 | 说明                 | 默认值 |
+| ------ | -------------------- | ------ |
+| -      | 默认插槽，触发的节点 | 无     |
+

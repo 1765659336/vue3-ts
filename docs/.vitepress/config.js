@@ -1,9 +1,15 @@
 export default {
     title: '文档',
     description: '',
+    lastUpdated: true,
+    markdown: {
+        theme: 'material-palenight',
+        lineNumbers: true,
+    },
     themeConfig: {
         setTitle: false,
         logo: '/logo.ico',
+        lastUpdatedText: "最后更新时间",
         nav: [
             { text: '首页', link: '/' },
             {
@@ -39,9 +45,7 @@ export default {
                         { text: 'Cantainer布局容器', link: '/Custom/Cantainer' },
                         { text: 'Checkbox复选框', link: '/Custom/Checkbox' },
                         { text: 'Collapse折叠面板', link: '/Custom/Collapse' },
-                        { text: 'CollapseItem折叠面板子元素', link: '/Custom/CollapseItem' },
                         { text: 'Dropdown下拉菜单', link: '/Custom/Dropdown' },
-                        { text: 'DropdownItem下拉菜单子元素', link: '/Custom/DropdownItem' },
                         { text: 'Link文字链接', link: '/Custom/Link' },
                         { text: 'Message消息提示框', link: '/Custom/Message' },
                         { text: 'Popover气泡弹出框', link: '/Custom/Popover' },

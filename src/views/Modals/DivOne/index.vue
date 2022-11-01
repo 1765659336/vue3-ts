@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "/DivOne",
-});
+// defineOptions({
+//   name: "/DivOne",
+// });
 </script>
 
 <style scoped lang="less">

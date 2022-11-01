@@ -32,9 +32,9 @@
 
 <script setup lang="ts">
 import CustomButton from "src/components/CustomComponents/CustomButton/index.vue";
-defineOptions({
-  name: "CustomButtonTest",
-});
+// defineOptions({
+//   name: "CustomButtonTest",
+// });
 const btnClick = function (e: MouseEvent) {
   console.log("按钮", e);
 };

@@ -8,9 +8,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "CustomAside",
-});
+// defineOptions({
+//   name: "CustomAside",
+// });
 
 const props = defineProps({
   width: {

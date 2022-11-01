@@ -8,9 +8,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "CustomHeader",
-});
+// defineOptions({
+//   name: "CustomHeader",
+// });
 
 const props = defineProps({
   height: {

@@ -14,9 +14,9 @@
 <script setup lang="ts">
 import { computed } from "@vue/runtime-core";
 
-defineOptions({
-  name: "CustomLink",
-});
+// defineOptions({
+//   name: "CustomLink",
+// });
 
 const props = defineProps({
   mainColor: {

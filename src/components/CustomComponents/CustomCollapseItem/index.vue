@@ -26,9 +26,9 @@ import {
   ref,
 } from "vue";
 
-defineOptions({
-  name: "CustomCollapseItem",
-});
+// defineOptions({
+//   name: "CustomCollapseItem",
+// });
 
 const currentInstance: ComponentInternalInstance | null = getCurrentInstance();
 

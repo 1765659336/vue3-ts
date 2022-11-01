@@ -11,9 +11,9 @@
 <script setup lang="ts">
 import { getCurrentInstance, onMounted, PropType, ref } from "vue";
 
-defineOptions({
-  name: "CustomDropdownItem",
-});
+// defineOptions({
+//   name: "CustomDropdownItem",
+// });
 
 const props = defineProps({
   command: {

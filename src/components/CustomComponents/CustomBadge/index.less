@@ -18,14 +18,14 @@
 
   .custom-badge-icon-text {
     display: inline-block;
-    min-width: @font-size;
+    min-width: calc(@font-size + 4px);
     max-width: calc(3 * @font-size);
-    height: @font-size;
+    height: calc(@font-size + 4px);
     overflow: hidden; //超出的文本隐藏
     text-overflow: ellipsis; //溢出用省略号显示
     white-space: nowrap; //溢出不换行
     color: var(--custom-badge-color--);
     padding: 2px 2px;
-    line-height: @font-size;
+    line-height: calc(@font-size + 4px);
   }
 }

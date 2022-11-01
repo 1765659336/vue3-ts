@@ -37,9 +37,9 @@
 
 <script setup lang="ts">
 import CustomPopover from "src/components/CustomComponents/CustomPopover/index.vue";
-defineOptions({
-  name: "CustomPopoverTest",
-});
+// defineOptions({
+//   name: "CustomPopoverTest",
+// });
 </script>
 
 <style scoped lang="less">

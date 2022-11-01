@@ -19,9 +19,9 @@ import { Login, getSystemStyle } from "src/api/permissions";
 import { reactive } from "vue";
 import router from "src/router/index";
 import { useStyleVariableStore, useUserInfoStore } from "src/store/index";
-defineOptions({
-  name: "/Login",
-});
+// defineOptions({
+//   name: "/Login",
+// });
 // 获取全局样式变量仓库
 const styleVariableStore = useStyleVariableStore();
 // 获取用户信息容器

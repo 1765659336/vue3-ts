@@ -14,9 +14,9 @@
 <script setup lang="ts">
 import { getCurrentInstance, onMounted, PropType, reactive } from "vue";
 
-defineOptions({
-  name: "CustomButton",
-});
+// defineOptions({
+//   name: "CustomButton",
+// });
 
 const props = defineProps({
   // 按钮类型

@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: "/ModalError",
-});
+// defineOptions({
+//   name: "/ModalError",
+// });
 </script>
 
 <style scoped lang="less"></style>

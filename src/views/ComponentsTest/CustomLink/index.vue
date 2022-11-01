@@ -25,9 +25,9 @@
 <script setup lang="ts">
 import CustomLink from "src/components/CustomComponents/CustomLink/index.vue";
 import { ref } from "vue";
-defineOptions({
-  name: "CustomLinkTest",
-});
+// defineOptions({
+//   name: "CustomLinkTest",
+// });
 
 const disabled = ref(true);
 
