@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "@vue/runtime-core";
+import { computed } from "vue";
 
 // defineOptions({
 //   name: "CustomLink",
@@ -76,7 +76,7 @@ const renderStyle = function () {
   };
 };
 const clickFun = function (e: MouseEvent) {
-  if (disabled) {
+  if (disabled.value) {
     e.preventDefault();
   } else {
     if (props.url === "") {
