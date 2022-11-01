@@ -15,16 +15,7 @@ import { onMounted, PropType, ref } from "vue";
 //   name: "CustomCantainer",
 // });
 
-const props = defineProps({
-  flexDirection: {
-    type: Object as PropType<"wrap" | "nowrap">,
-    default: () => {
-      return "nowrap";
-    },
-  },
-});
-
-const flexDirection = ref(props.flexDirection);
+const flexDirection = ref("nowrap");
 
 const containerRef = ref();
 onMounted(() => {
