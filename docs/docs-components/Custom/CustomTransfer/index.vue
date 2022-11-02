@@ -1,6 +1,3 @@
-## 基本使用
-:::details 点我查看代码
-```vue
 <template>
   <CustomTransfer v-model:transferValue="value" :data="data"></CustomTransfer>
 </template>
@@ -31,8 +28,3 @@ const value = ref([]);
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomTransferTest></CustomTransferTest>

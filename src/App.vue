@@ -9,13 +9,13 @@
     class="app"
   >
     <router-view></router-view>
-    <global-navigation></global-navigation>
+    <GlobalNavigation></GlobalNavigation>
   </div>
 </template>
 
 <script setup lang="ts">
-import GlobalNavigation from "src/components/GlobalNavigation/index.vue";
 import { useStyleVariableStore } from "src/store/index";
+import GlobalNavigation from "src/components/GlobalNavigation/index.vue"
 
 // 全局样式仓库
 const styleVariableStore = useStyleVariableStore();

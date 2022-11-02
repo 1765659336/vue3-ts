@@ -1,9 +1,9 @@
 <template>
+  <CustomButton type="primary" @click="clearCopy">清空</CustomButton>
+  <CustomButton type="primary" @click="fallbackCopy">回退</CustomButton>
+  <CustomButton type="primary" @click="downLoadCopy">下载</CustomButton>
+  <CustomButton type="primary" @click="saveCopy">保存</CustomButton>
   <div class="custom-signature-container">
-    <el-button type="primary" @click="clearCopy">清空</el-button>
-    <el-button type="primary" @click="fallbackCopy">回退</el-button>
-    <el-button type="primary" @click="downLoadCopy">下载</el-button>
-    <el-button type="primary" @click="saveCopy">保存</el-button>
     <canvas
       ref="cvs"
       :width="props.canvasWidth"

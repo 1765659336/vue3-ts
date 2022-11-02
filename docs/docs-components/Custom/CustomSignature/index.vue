@@ -1,7 +1,3 @@
-## 基本使用
-
-:::details 点我查看代码
-```vue
 <template>
   <div>
     <CustomSignature
@@ -23,8 +19,3 @@ const saveCallbackBlob = function (blob: any) {
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomSignature></CustomSignature>

@@ -1,6 +1,3 @@
-## 基本使用
-:::details 点我查看代码
-```vue
 <template>
   <CustomTag>标签</CustomTag>
   <CustomTag v-model="isShow" @close="closeCallback" :isCanClose="isCanClose"
@@ -26,8 +23,3 @@ const closeCallback = function (e: MouseEvent) {
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomTagTest></CustomTagTest>

@@ -1,6 +1,3 @@
-## 基本使用
-:::details
-```vue
 <template>
   <CustomButton type="primary" @click="createNode">Message</CustomButton>
 </template>
@@ -18,8 +15,3 @@ const createNode = function () {
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomMessageTest></CustomMessageTest>

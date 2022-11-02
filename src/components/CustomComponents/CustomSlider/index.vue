@@ -1,6 +1,5 @@
 <template>
   <div>
-    <input type="range" />
     <div class="container" ref="container">
       <div class="left" ref="left"></div>
       <div class="knob" ref="knob" id="knob"></div>

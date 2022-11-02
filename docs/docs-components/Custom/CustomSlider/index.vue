@@ -11,10 +11,6 @@
 
 <script setup lang="ts">
 import { Ref, ref } from "vue";
-// defineOptions({
-//   name: "CustomSliderTest",
-// });
-
 const sliderValue: Ref<number> = ref(0);
 </script>
 

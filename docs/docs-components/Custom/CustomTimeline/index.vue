@@ -1,6 +1,3 @@
-## 基本使用
-:::details 点我查看代码
-```vue
 <template>
   <div
     :style="{
@@ -14,8 +11,8 @@
     <CustomTimeline
       timeValue="2020-12-12"
       contentValue="你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你
-    好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你
-    好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀"
+      好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你
+      好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀"
     ></CustomTimeline>
     <CustomTimeline timeValue="2020-12-12">
       插槽内容
@@ -33,12 +30,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomTimelineTest></CustomTimelineTest>

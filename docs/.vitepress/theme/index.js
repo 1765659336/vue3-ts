@@ -6,7 +6,7 @@ import Directives from '../../../src/v_instructions';
 import customComponents from '../../../src/components/CustomComponents/index';
 
 // markdown组件
-import { customComponentsTest } from './custom';
+import customComponentsTest from './custom';
 
 const components = { ...customComponents, ...customComponentsTest }
 

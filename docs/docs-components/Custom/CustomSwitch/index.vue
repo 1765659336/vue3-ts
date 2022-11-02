@@ -1,6 +1,3 @@
-## 基本使用
-:::details 点我查看代码
-```vue
 <template>
   <CustomSwitch v-model="value"></CustomSwitch>
   {{ value }}
@@ -12,8 +9,3 @@ const value = ref(false);
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomSwitchTest></CustomSwitchTest>

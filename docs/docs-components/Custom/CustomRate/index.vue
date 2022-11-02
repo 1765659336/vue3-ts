@@ -1,6 +1,3 @@
-## 基本使用
-::: details 点我查看代码
-```vue
 <template>
   <CustomRate v-model:rateValue="value" :rateItemNumber="5"></CustomRate>
   评分级别:{{ value }}
@@ -27,8 +24,3 @@ const value6 = ref(5);
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomRateTest></CustomRateTest>

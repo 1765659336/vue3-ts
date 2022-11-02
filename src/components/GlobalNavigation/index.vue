@@ -15,7 +15,7 @@ import useDrag from "src/hooks/useDrag";
 import { onMounted, Ref, ref } from "vue";
 import ModalManage from "src/components/ModalManage/index.vue";
 import { Briefcase } from "@element-plus/icons-vue";
-import useContentSwitch from "src/components/GlobalNavigation/hooks/useContentSwitch";
+import useContentSwitch from "./hooks/useContentSwitch";
 // defineOptions({
 //   name: "/CustomNavigation",
 // });

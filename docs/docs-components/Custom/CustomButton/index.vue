@@ -1,6 +1,3 @@
-## 基本使用
-:::details
-```vue
 <template>
   <CustomButton @click="btnClick">按钮</CustomButton>
   <CustomButton autofocus round circle type="primary" @click="btnClick"
@@ -36,8 +33,3 @@ const btnClick = function (e: MouseEvent) {
 </script>
 
 <style scoped lang="less"></style>
-
-```
-:::
-
-<CustomButtonTest></CustomButtonTest>

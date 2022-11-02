@@ -3,6 +3,7 @@
 </template>
 
 <script setup lang="ts">
+import { CustomMessage } from "src/components/CustomComponents/CustomMessage/index";
 // defineOptions({
 //   name: "CustomMessageTest",
 // });
