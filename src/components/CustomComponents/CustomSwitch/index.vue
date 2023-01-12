@@ -1,4 +1,7 @@
 <template>
+  <span v-if="props.textTitle[0]" :class="!inputValue ? 'close' : ''">{{
+    props.textTitle[0]
+  }}</span>
   <div
     class="custom-switch-container"
     :style="{
@@ -9,6 +12,9 @@
   >
     <div class="custom-switch-switch"></div>
   </div>
+  <span v-if="props.textTitle[1]" :class="inputValue ? 'open' : ''">{{
+    props.textTitle[1]
+  }}</span>
 </template>
 
 <script setup lang="ts">
@@ -20,8 +26,14 @@ import { computed } from "vue";
 const props = defineProps({
   modelValue: {
     type: Boolean,
-    defalut: () => {
+    default: () => {
       return false;
+    },
+  },
+  textTitle: {
+    type: Array,
+    default: () => {
+      return [];
     },
   },
 });
