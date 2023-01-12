@@ -1,5 +1,5 @@
 <template>
-  <CustomSwitch v-model="value"></CustomSwitch>
+  <CustomSwitch v-model="value" :textTitle="['开', '关']"></CustomSwitch>
   {{ value }}
 </template>
 
