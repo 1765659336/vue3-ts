@@ -17,7 +17,7 @@
     <CustomTimeline timeValue="2020-12-12">
       插槽内容
       <template #time-value><span> 2022-12-21 </span></template>
-    </CustomTimeline>
+    </CustomTimeline> 
     <CustomTimeline timeValue="2020-12-12">
       插槽内容
       <template #time-value><span> 2022-12-21 </span></template>
